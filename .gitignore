@@ -30,11 +30,18 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files — never commit secrets
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
+
+# audit runtime data — never commit, storage is memory-only in production
+/data/leads.json
+/data/reports.json
 
 # typescript
 *.tsbuildinfo
