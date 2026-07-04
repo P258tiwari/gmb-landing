@@ -56,7 +56,7 @@ export default async function AuditReportPage({
   const waHref = `https://wa.me/${WA_NUM}?text=Hi%20Ampwake%2C%20I%27d%20like%20to%20connect%20and%20improve%20my%20GMB%20profile.`;
 
   return (
-    <div className="bg-[#060d1f]" style={{ overflowX: "hidden" }}>
+    <div className="bg-[#060d1f]" style={{ overflowX: "hidden", overflowWrap: "break-word" }}>
       <ScrollReset />
 
       {/* Ambient background glow */}
