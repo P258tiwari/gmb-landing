@@ -42,7 +42,7 @@ export default function Image() {
               background: "#00ff88",
             }}
           />
-          Ampwake
+          Get Real Flow
         </div>
         <div
           style={{

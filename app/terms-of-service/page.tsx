@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Ampwake",
-  description: "Terms and conditions for using Ampwake GMB Optimization services.",
+  title: "Terms of Service — Get Real Flow",
+  description: "Terms and conditions for using Get Real Flow GMB Optimization services.",
   robots: { index: false, follow: false },
 };
 
@@ -23,7 +23,7 @@ export default function TermsOfService() {
       <header className="border-b border-white/5 py-4 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/">
-            <Image src="/logo.png" alt="Ampwake" width={130} height={36} className="h-9 w-auto object-contain" />
+            <Image src="/logo.png" alt="Get Real Flow" width={130} height={36} className="h-9 w-auto object-contain" />
           </Link>
           <Link href="/" className="text-[#8899bb] text-sm hover:text-white transition-colors">← Back to Home</Link>
         </div>
@@ -37,11 +37,11 @@ export default function TermsOfService() {
         </div>
 
         <Section title="1. Acceptance of Terms">
-          <p>By engaging with Ampwake&apos;s services — whether through this website, email, phone, or WhatsApp — you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.</p>
+          <p>By engaging with Get Real Flow&apos;s services — whether through this website, email, phone, or WhatsApp — you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.</p>
         </Section>
 
         <Section title="2. Services Provided">
-          <p>Ampwake provides Google Business Profile (GMB) optimization and local SEO services, including but not limited to:</p>
+          <p>Get Real Flow provides Google Business Profile (GMB) optimization and local SEO services, including but not limited to:</p>
           <ul className="list-disc pl-5 space-y-1.5">
             <li>100-point GMB audits</li>
             <li>Profile setup and optimization</li>
@@ -90,11 +90,11 @@ export default function TermsOfService() {
         </Section>
 
         <Section title="8. Intellectual Property">
-          <p>All content, reports, strategies, and materials created by Ampwake remain the intellectual property of Ampwake until full payment is received. Upon payment, you are granted a non-exclusive licence to use the deliverables for your business.</p>
+          <p>All content, reports, strategies, and materials created by Get Real Flow remain the intellectual property of Get Real Flow until full payment is received. Upon payment, you are granted a non-exclusive licence to use the deliverables for your business.</p>
         </Section>
 
         <Section title="9. Limitation of Liability">
-          <p>Ampwake is not liable for ranking changes caused by Google algorithm updates, changes to Google&apos;s platform policies, or actions taken by the client outside our recommendations. Our total liability is limited to the fees paid in the preceding 3 months.</p>
+          <p>Get Real Flow is not liable for ranking changes caused by Google algorithm updates, changes to Google&apos;s platform policies, or actions taken by the client outside our recommendations. Our total liability is limited to the fees paid in the preceding 3 months.</p>
         </Section>
 
         <Section title="10. Governing Law">
@@ -115,7 +115,7 @@ export default function TermsOfService() {
       </main>
 
       <footer className="border-t border-white/5 py-6 text-center text-xs text-[#8899bb]/50">
-        &copy; {new Date().getFullYear()} Ampwake. All rights reserved.
+        &copy; {new Date().getFullYear()} Get Real Flow. All rights reserved.
       </footer>
     </div>
   );

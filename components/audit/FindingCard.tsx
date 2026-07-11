@@ -61,7 +61,7 @@ export default function FindingCard({ finding, index, number }: Props) {
   const Icon = cfg.icon;
   const impactCfg = IMPACT_CONFIG[finding.impact] ?? IMPACT_CONFIG.High;
 
-  const waHref = `https://wa.me/${WA_NUM}?text=Hi%20Ampwake%2C%20I%27d%20like%20to%20connect%20and%20improve%20my%20GMB%20profile.`;
+  const waHref = `https://wa.me/${WA_NUM}?text=Hi%20Get%20Real%20Flow%2C%20I%27d%20like%20to%20connect%20and%20improve%20my%20GMB%20profile.`;
 
   const showTip = finding.tip !== null && finding.status !== "locked";
 

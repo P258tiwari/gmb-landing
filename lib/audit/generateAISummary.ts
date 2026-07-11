@@ -97,9 +97,9 @@ function ruleBasedSummary(input: SummaryInput): AISummary {
 
   const ctaText =
     score < 50
-      ? "Your profile has critical gaps — connect with Ampwake and start capturing leads you are losing right now."
+      ? "Your profile has critical gaps — connect with Get Real Flow and start capturing leads you are losing right now."
       : score < 70
-      ? "You are underperforming your potential. Connect with Ampwake and start ranking properly."
+      ? "You are underperforming your potential. Connect with Get Real Flow and start ranking properly."
       : score < 85
       ? "Your profile is decent but competitors may be outranking you. Let us close the remaining gaps."
       : "Strong profile — let us turn it into a consistent lead generation machine.";
@@ -163,7 +163,7 @@ Reply ONLY with this JSON (no markdown, no extra text):
   "opportunities": ["concrete opportunity 1", "concrete opportunity 2", "concrete opportunity 3"],
   "recommendations": ["actionable fix 1", "actionable fix 2", "actionable fix 3"],
   "suggestedPlan": "Max|Growth|Starter",
-  "ctaText": "Short persuasive CTA encouraging the business to connect with Ampwake"
+  "ctaText": "Short persuasive CTA encouraging the business to connect with Get Real Flow"
 }`;
 
   try {

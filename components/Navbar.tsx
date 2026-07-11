@@ -45,7 +45,7 @@ export default function Navbar() {
             className="flex items-center flex-shrink-0"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
           >
-            <Image src="/logo.png" alt="Ampwake" width={130} height={36} className="h-9 w-auto object-contain" priority />
+            <Image src="/logo.png" alt="Get Real Flow" width={130} height={36} className="h-9 w-auto object-contain" priority />
           </Link>
 
           {/* CTA */}

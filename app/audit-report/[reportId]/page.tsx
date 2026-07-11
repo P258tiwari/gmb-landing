@@ -24,7 +24,7 @@ export async function generateMetadata({
   const report = await getReport(reportId);
   const name = report?.businessName ?? "Your Business";
   return {
-    title: `Public GMB Optimization Score — ${name} | Ampwake`,
+    title: `Public GMB Optimization Score — ${name} | Get Real Flow`,
     description: `Free public GMB audit for ${name}. Score: ${report?.publicAuditScore ?? "—"}/100. See what's holding your Google Maps visibility back.`,
     robots: { index: false, follow: false },
   };
@@ -53,7 +53,7 @@ export default async function AuditReportPage({
     year: "numeric",
   });
 
-  const waHref = `https://wa.me/${WA_NUM}?text=Hi%20Ampwake%2C%20I%27d%20like%20to%20connect%20and%20improve%20my%20GMB%20profile.`;
+  const waHref = `https://wa.me/${WA_NUM}?text=Hi%20Get%20Real%20Flow%2C%20I%27d%20like%20to%20connect%20and%20improve%20my%20GMB%20profile.`;
 
   return (
     <div className="bg-[#060d1f]" style={{ overflowX: "hidden", overflowWrap: "break-word" }}>
@@ -140,7 +140,7 @@ export default async function AuditReportPage({
             </p>
             <p className="text-[#8899bb] text-[10px] text-center mt-2 leading-relaxed">
               Based on 6 signal categories out of 100 points. Full citation, competitor,
-              and keyword data available via Ampwake onboarding.
+              and keyword data available via Get Real Flow onboarding.
             </p>
           </div>
 
@@ -433,7 +433,7 @@ export default async function AuditReportPage({
               Want the exact improvement plan?
             </h2>
             <p className="text-[#8899bb] text-sm leading-relaxed max-w-xl mx-auto mb-6">
-              Connect with Ampwake and our team will review your profile, explain the fixes,
+              Connect with Get Real Flow and our team will review your profile, explain the fixes,
               and guide you toward better local visibility.
             </p>
             <a
@@ -447,7 +447,7 @@ export default async function AuditReportPage({
                 color: "#00ff88",
               }}
             >
-              Connect with Ampwake
+              Connect with Get Real Flow
             </a>
           </div>
         </section>
@@ -472,7 +472,7 @@ export default async function AuditReportPage({
           This free report uses publicly available Google Maps profile data. Scores are based
           on 6 signal categories totalling 100 points. Complete keyword tracking, competitor
           benchmarking, citation audit, and owner-level insights require onboarding with
-          Ampwake. Report ID: {report.id}
+          Get Real Flow. Report ID: {report.id}
         </p>
       </main>
     </div>

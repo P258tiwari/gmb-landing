@@ -5,14 +5,14 @@ import { Shield, Star, Clock } from "lucide-react";
 import AuditForm from "@/components/audit/AuditForm";
 
 export const metadata: Metadata = {
-  title: "Free GMB Audit — Ampwake",
+  title: "Free GMB Audit — Get Real Flow",
   description:
     "Get a free AI-powered Google Business Profile audit. See your public visibility score, what's missing, and what's costing you calls.",
   alternates: {
     canonical: "/free-audit",
   },
   openGraph: {
-    title: "Free GMB Audit - Ampwake",
+    title: "Free GMB Audit - Get Real Flow",
     description:
       "Get a free AI-powered Google Business Profile audit and see what's costing you calls from Google Maps.",
     url: "/free-audit",
@@ -43,7 +43,7 @@ export default function FreeAuditPage() {
           <Link href="/">
             <Image
               src="/logo.png"
-              alt="Ampwake"
+              alt="Get Real Flow"
               width={120}
               height={32}
               className="h-8 w-auto object-contain"

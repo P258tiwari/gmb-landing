@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Refund Policy — Ampwake",
-  description: "Refund and money-back guarantee policy for Ampwake GMB Optimization services.",
+  title: "Refund Policy — Get Real Flow",
+  description: "Refund and money-back guarantee policy for Get Real Flow GMB Optimization services.",
   robots: { index: false, follow: false },
 };
 
@@ -23,7 +23,7 @@ export default function RefundPolicy() {
       <header className="border-b border-white/5 py-4 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/">
-            <Image src="/logo.png" alt="Ampwake" width={130} height={36} className="h-9 w-auto object-contain" />
+            <Image src="/logo.png" alt="Get Real Flow" width={130} height={36} className="h-9 w-auto object-contain" />
           </Link>
           <Link href="/" className="text-[#8899bb] text-sm hover:text-white transition-colors">← Back to Home</Link>
         </div>
@@ -48,7 +48,7 @@ export default function RefundPolicy() {
         </div>
 
         <Section title="1. Money-Back Guarantee">
-          <p>Ampwake guarantees Top 3 Google Maps rankings for the following number of keywords, depending on your plan:</p>
+          <p>Get Real Flow guarantees Top 3 Google Maps rankings for the following number of keywords, depending on your plan:</p>
           <ul className="list-disc pl-5 space-y-1.5">
             <li><strong className="text-white">Starter Plan</strong> — Top 3 for 2 keywords within 6 months</li>
             <li><strong className="text-white">Growth Plan</strong> — Top 3 for 5 keywords within 6 months</li>
@@ -97,7 +97,7 @@ export default function RefundPolicy() {
         </Section>
 
         <Section title="6. GST on Refunds">
-          <p>GST collected on payments is remitted to the government and cannot be refunded by Ampwake. Refunds will be issued for the base service amount exclusive of GST.</p>
+          <p>GST collected on payments is remitted to the government and cannot be refunded by Get Real Flow. Refunds will be issued for the base service amount exclusive of GST.</p>
         </Section>
 
         <Section title="7. Contact Us">
@@ -111,7 +111,7 @@ export default function RefundPolicy() {
       </main>
 
       <footer className="border-t border-white/5 py-6 text-center text-xs text-[#8899bb]/50">
-        &copy; {new Date().getFullYear()} Ampwake. All rights reserved.
+        &copy; {new Date().getFullYear()} Get Real Flow. All rights reserved.
       </footer>
     </div>
   );

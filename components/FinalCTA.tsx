@@ -389,7 +389,7 @@ export default function FinalCTA() {
                 </motion.button>
 
                 <motion.a
-                  href="https://wa.me/919876543210?text=Hi%20Ampwake%2C%20I%27d%20like%20a%20free%20GMB%20audit%20for%20my%20business."
+                  href="https://wa.me/919876543210?text=Hi%20Get%20Real%20Flow%2C%20I%27d%20like%20a%20free%20GMB%20audit%20for%20my%20business."
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}

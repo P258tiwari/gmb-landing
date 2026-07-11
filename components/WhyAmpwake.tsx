@@ -30,7 +30,7 @@ export default function WhyAmpwake() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(77,159,255,0.3)] bg-[rgba(77,159,255,0.06)] mb-5"
           >
-            <span className="text-[#4d9fff] text-xs font-medium">Why Choose Ampwake</span>
+            <span className="text-[#4d9fff] text-xs font-medium">Why Choose Get Real Flow</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export default function WhyAmpwake() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-[#8899bb] text-base max-w-xl mx-auto"
           >
-            Four pillars that separate Ampwake from every other
+            Four pillars that separate Get Real Flow from every other
             <br />
             local SEO agency in India.
           </motion.p>

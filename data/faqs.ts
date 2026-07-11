@@ -47,7 +47,7 @@ export const faqs: FAQ[] = [
   {
     question: "Do you run Google Ads as well?",
     answer:
-      "Yes, as an add-on service. We run Google Maps ads specifically — putting your business at the very top of Maps results. You can choose to run ads on your own Google Ads account (we set it up) or on Ampwake's account (no account needed). Pricing: ₹1,000/month + 20% of your ad budget, plus a one-time setup fee.",
+      "Yes, as an add-on service. We run Google Maps ads specifically — putting your business at the very top of Maps results. You can choose to run ads on your own Google Ads account (we set it up) or on Get Real Flow's account (no account needed). Pricing: ₹1,000/month + 20% of your ad budget, plus a one-time setup fee.",
   },
   {
     question: "Can new businesses use this service?",

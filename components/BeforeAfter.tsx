@@ -66,7 +66,7 @@ export default function BeforeAfter() {
             transition={{ delay: 0.25 }}
             className="mt-4 text-[#8899bb] text-base max-w-md mx-auto"
           >
-            See exactly what changes when Ampwake optimizes your Google Business Profile.
+            See exactly what changes when Get Real Flow optimizes your Google Business Profile.
           </motion.p>
         </div>
 
@@ -91,7 +91,7 @@ export default function BeforeAfter() {
             >
               <div className="w-2 h-2 rounded-full bg-red-500" />
               <span className="text-red-400 text-xs font-bold uppercase tracking-widest">
-                Before Ampwake
+                Before Get Real Flow
               </span>
             </div>
 
@@ -192,7 +192,7 @@ export default function BeforeAfter() {
             >
               <div className="w-2 h-2 rounded-full bg-[#00ff88]" />
               <span className="text-[#00ff88] text-xs font-bold uppercase tracking-widest">
-                After Ampwake
+                After Get Real Flow
               </span>
             </div>
 

@@ -26,7 +26,7 @@ export default function ManualReview({ report }: Props) {
       <header className="border-b border-white/5 py-4 px-6">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <Link href="/">
-            <Image src="/logo.png" alt="Ampwake" width={110} height={30} className="h-8 w-auto object-contain" />
+            <Image src="/logo.png" alt="Get Real Flow" width={110} height={30} className="h-8 w-auto object-contain" />
           </Link>
           <Link href="/" className="text-[#8899bb] text-sm hover:text-white transition-colors">← Home</Link>
         </div>
@@ -99,7 +99,7 @@ export default function ManualReview({ report }: Props) {
             </div>
 
             <motion.a
-              href={`https://wa.me/${WA_NUM}?text=Hi%20Ampwake%2C%20I%20submitted%20a%20GMB%20audit%20request${report.businessName ? `%20for%20${encodeURIComponent(report.businessName)}` : ""}.%20Can%20you%20expedite%20it%3F`}
+              href={`https://wa.me/${WA_NUM}?text=Hi%20Get%20Real%20Flow%2C%20I%20submitted%20a%20GMB%20audit%20request${report.businessName ? `%20for%20${encodeURIComponent(report.businessName)}` : ""}.%20Can%20you%20expedite%20it%3F`}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(37,211,102,0.25)" }}
@@ -118,7 +118,7 @@ export default function ManualReview({ report }: Props) {
               href="/"
               className="mt-4 block text-[#8899bb] text-sm hover:text-white transition-colors"
             >
-              ← Back to Ampwake home
+              ← Back to Get Real Flow home
             </Link>
           </motion.div>
         </div>

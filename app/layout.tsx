@@ -9,19 +9,19 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gmb.ampwake.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.getrealflow.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "Ampwake GMB Optimization India | Google Maps Ranking Service",
-    template: "%s | Ampwake",
+    default: "Get Real Flow GMB Optimization India | Google Maps Ranking Service",
+    template: "%s | Get Real Flow",
   },
   description:
-    "Get your business ranked in the Top 3 on Google Maps with Ampwake's AI-powered Google Business Profile optimization, 100-point audit, review management, posts, photos, and ranking reports.",
+    "Get your business ranked in the Top 3 on Google Maps with Get Real Flow's AI-powered Google Business Profile optimization, 100-point audit, review management, posts, photos, and ranking reports.",
   keywords:
     "GMB optimization India, Google My Business optimization, local SEO India, Google Maps ranking, Google Business Profile, Top 3 Google Maps, local SEO service India",
-  authors: [{ name: "Ampwake" }],
-  creator: "Ampwake",
+  authors: [{ name: "Get Real Flow" }],
+  creator: "Get Real Flow",
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: siteUrl,
-    siteName: "Ampwake",
-    title: "Ampwake GMB Optimization India | Google Maps Ranking Service",
+    siteName: "Get Real Flow",
+    title: "Get Real Flow GMB Optimization India | Google Maps Ranking Service",
     description:
       "AI-powered Google Business Profile optimization that helps local Indian businesses rank higher, get more calls, and win customers from Google Maps.",
     images: [
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Ampwake GMB Optimization",
+        alt: "Get Real Flow GMB Optimization",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ampwake GMB Optimization India",
+    title: "Get Real Flow GMB Optimization India",
     description: "Get your business into the Top 3 on Google Maps in 6 months or your money back.",
     images: ["/opengraph-image"],
   },
@@ -67,11 +67,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "@id": "https://gmb.ampwake.com",
-      name: "Ampwake",
+      "@id": "https://www.getrealflow.com",
+      name: "Get Real Flow",
       description:
         "AI-powered Google Business Profile optimization and local SEO service for Indian businesses.",
-      url: "https://gmb.ampwake.com",
+      url: "https://www.getrealflow.com",
       telephone: "+91-84520-13047",
       email: "info@ampwake.com",
       address: {

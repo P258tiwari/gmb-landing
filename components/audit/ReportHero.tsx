@@ -50,7 +50,7 @@ export default function ReportHero({ report }: Props) {
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
               src="/logo.png"
-              alt="Ampwake"
+              alt="Get Real Flow"
               width={130}
               height={36}
               className="h-9 w-auto object-contain"
@@ -77,7 +77,7 @@ export default function ReportHero({ report }: Props) {
 
           {/* CTA */}
           <motion.a
-            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "918452013047"}?text=Hi%20Ampwake%2C%20I%20want%20to%20unlock%20my%20full%20GMB%20audit.`}
+            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "918452013047"}?text=Hi%20Get%20Real%20Flow%2C%20I%20want%20to%20unlock%20my%20full%20GMB%20audit.`}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}

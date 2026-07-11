@@ -15,7 +15,7 @@ const PLATFORMS = [
   },
   {
     id: "ampwake",
-    label: "Ampwake Account",
+    label: "Get Real Flow Account",
     description: "We set up the Maps campaign only",
     setupFee: 3000,
     badge: "No account needed",
@@ -33,7 +33,7 @@ const FEATURES = [
 
 const PLATFORM_EXTRAS: Record<string, string[]> = {
   client: ["We set up your Google Ads account", "Full account ownership — your data, always"],
-  ampwake: ["Campaign runs on Ampwake's account", "No Google Ads account setup required"],
+  ampwake: ["Campaign runs on Get Real Flow's account", "No Google Ads account setup required"],
 };
 
 function formatINR(n: number) {
@@ -202,7 +202,7 @@ function CalcModal({
                     className="flex justify-between items-center pt-2.5 mt-1 border-t"
                     style={{ borderColor: "rgba(0,255,136,0.15)" }}
                   >
-                    <span className="text-white font-bold text-sm">Ampwake fee monthly</span>
+                    <span className="text-white font-bold text-sm">Get Real Flow fee monthly</span>
                     <span className="text-[#00ff88] font-black text-lg">{formatINR(totalMonthly)}/mo</span>
                   </div>
                   <p className="text-[#445566] text-[10px] mt-1">

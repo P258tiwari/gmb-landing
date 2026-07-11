@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Ampwake",
-  description: "Privacy policy for Ampwake GMB Optimization services.",
+  title: "Privacy Policy — Get Real Flow",
+  description: "Privacy policy for Get Real Flow GMB Optimization services.",
   robots: { index: false, follow: false },
 };
 
@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
       <header className="border-b border-white/5 py-4 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/">
-            <Image src="/logo.png" alt="Ampwake" width={130} height={36} className="h-9 w-auto object-contain" />
+            <Image src="/logo.png" alt="Get Real Flow" width={130} height={36} className="h-9 w-auto object-contain" />
           </Link>
           <Link href="/" className="text-[#8899bb] text-sm hover:text-white transition-colors">← Back to Home</Link>
         </div>
@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <Section title="1. Who We Are">
-          <p>Ampwake (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is a Google Business Profile optimization and local SEO service based in Kanpur, India. We can be reached at <a href="mailto:info@ampwake.com" className="text-[#00ff88] hover:underline">info@ampwake.com</a> or +91 84520 13047.</p>
+          <p>Get Real Flow (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is a Google Business Profile optimization and local SEO service based in Kanpur, India. We can be reached at <a href="mailto:info@ampwake.com" className="text-[#00ff88] hover:underline">info@ampwake.com</a> or +91 84520 13047.</p>
         </Section>
 
         <Section title="2. Information We Collect">
@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
       </main>
 
       <footer className="border-t border-white/5 py-6 text-center text-xs text-[#8899bb]/50">
-        &copy; {new Date().getFullYear()} Ampwake. All rights reserved.
+        &copy; {new Date().getFullYear()} Get Real Flow. All rights reserved.
       </footer>
     </div>
   );

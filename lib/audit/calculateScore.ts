@@ -439,7 +439,7 @@ function calcCategoryRelevance(place: PlaceData): CategoryRelevanceBreakdown {
    Findings builder — 17 rows, no locked rows
    ══════════════════════════════════════════════════════ */
 const CTA = "Connect to Improve";
-const TIP = "Get the improvement plan by connecting with Ampwake.";
+const TIP = "Get the improvement plan by connecting with Get Real Flow.";
 
 function finding(
   key: string,

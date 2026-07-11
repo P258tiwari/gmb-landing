@@ -48,7 +48,7 @@ export default function AuditCTA() {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <motion.a
-              href={`https://wa.me/${WA_NUM}?text=Hi%20Ampwake%2C%20I%20want%20to%20unlock%20my%20full%20100-point%20GMB%20audit%20and%20discuss%20ranking%20my%20business.`}
+              href={`https://wa.me/${WA_NUM}?text=Hi%20Get%20Real%20Flow%2C%20I%20want%20to%20unlock%20my%20full%20100-point%20GMB%20audit%20and%20discuss%20ranking%20my%20business.`}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(0,255,136,0.35)" }}
@@ -56,11 +56,11 @@ export default function AuditCTA() {
               className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-[#060d1f] bg-[#00ff88] hover:bg-[#00cc6a] transition-all"
             >
               <MessageCircle className="w-4 h-4" />
-              WhatsApp Ampwake
+              WhatsApp Get Real Flow
             </motion.a>
 
             <motion.a
-              href={`https://wa.me/${WA_NUM}?text=Hi%20Ampwake%2C%20I%27d%20like%20to%20book%20a%20free%20strategy%20call.`}
+              href={`https://wa.me/${WA_NUM}?text=Hi%20Get%20Real%20Flow%2C%20I%27d%20like%20to%20book%20a%20free%20strategy%20call.`}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}

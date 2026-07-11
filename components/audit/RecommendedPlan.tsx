@@ -119,7 +119,7 @@ export default function RecommendedPlan({ recommended }: Props) {
             </ul>
 
             <motion.a
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "918452013047"}?text=Hi%20Ampwake%2C%20I%27m%20interested%20in%20the%20${plan.id}%20plan.`}
+              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "918452013047"}?text=Hi%20Get%20Real%20Flow%2C%20I%27m%20interested%20in%20the%20${plan.id}%20plan.`}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}

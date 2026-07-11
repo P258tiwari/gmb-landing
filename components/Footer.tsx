@@ -42,7 +42,7 @@ export default function Footer() {
 
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image src="/logo.png" alt="Ampwake" width={120} height={32} className="h-8 w-auto object-contain" />
+            <Image src="/logo.png" alt="Get Real Flow" width={120} height={32} className="h-8 w-auto object-contain" />
           </div>
 
           {/* Contact details */}
@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-6 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8899bb]/60">
-          <p>© {new Date().getFullYear()} Ampwake. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Get Real Flow. All rights reserved.</p>
           <div className="flex gap-5">
             <Link href="/privacy-policy" className="hover:text-[#8899bb] transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-[#8899bb] transition-colors">Terms of Service</Link>
