@@ -1,17 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const lastY = useRef(0);
   const { scrollYProgress } = useScroll();
   const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40);
+    const handler = () => {
+      const y = window.scrollY;
+      setScrolled(y > 40);
+      setVisible(y > lastY.current);
+      lastY.current = y;
+    };
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
@@ -22,11 +29,12 @@ export default function Navbar() {
       <motion.div className="scroll-progress-bar" style={{ width }} />
 
       {/* Floating pill navbar */}
-      <div className="fixed top-0 left-0 right-0 z-[100] flex justify-center px-6 lg:px-8 pt-4">
-        <motion.nav
-          initial={{ y: -60, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      <motion.div
+        className="fixed top-0 left-0 right-0 z-[100] flex justify-center px-6 lg:px-8 pt-4"
+        animate={{ y: visible ? 0 : "-150%" }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <nav
           className="w-full max-w-7xl flex items-center justify-between h-14 px-5 rounded-2xl transition-all duration-300"
           style={{
             background: scrolled ? "rgba(6,13,31,0.92)" : "rgba(6,13,31,0.6)",
@@ -57,8 +65,8 @@ export default function Navbar() {
           >
             Check Free Audit
           </motion.a>
-        </motion.nav>
-      </div>
+        </nav>
+      </motion.div>
     </>
   );
 }
