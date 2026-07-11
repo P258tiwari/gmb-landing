@@ -16,7 +16,7 @@ export default function Navbar() {
     const handler = () => {
       const y = window.scrollY;
       setScrolled(y > 40);
-      setVisible(y > lastY.current);
+      setVisible(y < lastY.current);
       lastY.current = y;
     };
     window.addEventListener("scroll", handler, { passive: true });
