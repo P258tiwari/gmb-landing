@@ -247,15 +247,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-black leading-[1.06] tracking-tight text-white"
+              className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3.25rem] font-black leading-[1.15] tracking-tight text-white"
             >
               Your customers
               <br />
               are searching.
               <br />
-              <span className="text-gradient-neon">Are they finding</span>
-              <br />
-              <span className="text-gradient-neon">you?</span>
+              <span className="text-gradient-neon whitespace-nowrap">Are they finding you?</span>
             </motion.h1>
 
             <motion.p
