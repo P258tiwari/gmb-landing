@@ -129,7 +129,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: jsonLdScript }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#060d1f]" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-white text-[#202124]" suppressHydrationWarning>
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

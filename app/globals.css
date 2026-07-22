@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy: #060d1f;
-  --color-navy-light: #0d1b3a;
-  --color-navy-card: #0f1f45;
-  --color-neon: #00ff88;
-  --color-neon-dim: #00cc6a;
-  --color-blue-accent: #4d9fff;
-  --color-blue-dim: #1a4a8a;
-  --color-glass: rgba(255, 255, 255, 0.04);
-  --color-glass-border: rgba(255, 255, 255, 0.08);
-  --color-text-muted: #8899bb;
+  --color-navy: #ffffff;
+  --color-navy-light: #f8fafd;
+  --color-navy-card: #ffffff;
+  --color-neon: #1a73e8;
+  --color-neon-dim: #1765cc;
+  --color-blue-accent: #4285f4;
+  --color-blue-dim: #d2e3fc;
+  --color-glass: rgba(255, 255, 255, 0.92);
+  --color-glass-border: #dadce0;
+  --color-text-muted: #5f6368;
   --font-sans: var(--font-inter);
   --font-display: var(--font-inter);
 }
@@ -50,8 +50,8 @@ html {
 }
 
 body {
-  background: #060d1f;
-  color: #ffffff;
+  background: #ffffff;
+  color: #202124;
   font-family: var(--font-inter, system-ui, -apple-system, sans-serif);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -59,51 +59,52 @@ body {
 }
 
 ::selection {
-  background: rgba(0, 255, 136, 0.25);
-  color: #ffffff;
+  background: #d2e3fc;
+  color: #174ea6;
 }
 
 ::-webkit-scrollbar {
   width: 3px;
 }
-::-webkit-scrollbar-track { background: #060d1f; }
+::-webkit-scrollbar-track { background: #f1f3f4; }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #00ff88, #4d9fff);
+  background: #9aa0a6;
   border-radius: 2px;
 }
 
 /* ─── Glass card ─── */
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.08), 0 2px 8px rgba(60, 64, 67, 0.06);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 /* ─── Borders / glows ─── */
 .neon-border {
-  border: 1px solid rgba(0, 255, 136, 0.3);
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.08), inset 0 0 20px rgba(0, 255, 136, 0.02);
+  border: 1px solid #a8c7fa;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.12);
 }
 
 .neon-glow {
-  box-shadow: 0 0 40px rgba(0, 255, 136, 0.35), 0 0 80px rgba(0, 255, 136, 0.15);
+  box-shadow: 0 8px 28px rgba(26, 115, 232, 0.18);
 }
 
 .blue-glow {
-  box-shadow: 0 0 40px rgba(77, 159, 255, 0.25), 0 0 80px rgba(77, 159, 255, 0.1);
+  box-shadow: 0 8px 28px rgba(66, 133, 244, 0.16);
 }
 
 /* ─── Gradients ─── */
 .text-gradient-neon {
-  background: linear-gradient(135deg, #00ff88 0%, #4d9fff 100%);
+  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 58%, #34a853 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-white {
-  background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.65) 100%);
+  background: linear-gradient(180deg, #202124 0%, #3c4043 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,35 +116,91 @@ body {
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #00ff88, #4d9fff);
+  background: linear-gradient(90deg, #4285f4, #34a853, #fbbc04, #ea4335);
   z-index: 9999;
   transform-origin: left;
 }
 
 /* ─── Maps card ─── */
 .maps-card {
-  background: linear-gradient(135deg, #0f1f45 0%, #060d1f 100%);
-  border: 1px solid rgba(77, 159, 255, 0.18);
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafd 100%);
+  border: 1px solid #dadce0;
+  box-shadow: 0 2px 10px rgba(60, 64, 67, 0.1);
 }
 
 /* ─── Chip ─── */
 .chip-item {
-  background: rgba(0, 255, 136, 0.07);
-  border: 1px solid rgba(0, 255, 136, 0.18);
-  color: #00ff88;
+  background: #e8f0fe;
+  border: 1px solid #d2e3fc;
+  color: #1967d2;
 }
 
 /* ─── Pricing popular card ─── */
 .pricing-popular {
-  background: linear-gradient(145deg, rgba(0,40,20,0.9) 0%, rgba(0,12,5,0.95) 100%);
-  border: 1px solid rgba(0, 255, 136, 0.35) !important;
-  box-shadow: 0 0 60px rgba(0, 255, 136, 0.08);
+  background: linear-gradient(145deg, #ffffff 0%, #f3f8ff 100%);
+  border: 2px solid #4285f4 !important;
+  box-shadow: 0 8px 28px rgba(66, 133, 244, 0.14);
 }
 
 /* ─── Section dividers ─── */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  background: linear-gradient(90deg, transparent, #dadce0, transparent);
+}
+
+/* Google Business Profile inspired light-theme compatibility layer.
+   These selectors intentionally remap the legacy dark utility tokens so every
+   route shares one visual system without changing component behaviour. */
+:root { color-scheme: light; }
+
+[class~="bg-[#060d1f]"],
+[class~="bg-[#030810]"],
+[class~="bg-[#07101f]"],
+[class~="bg-[#0a1628]"] { background-color: #ffffff !important; }
+
+[class~="text-white"],
+[class~="text-[#fff]"],
+[class~="text-[#ffffff]"] { color: #202124 !important; }
+
+[class~="text-[#8899bb]"],
+[class~="text-[#4a5a7a]"],
+[class~="text-[#445566]"],
+[class~="text-[#ccd6f0]"] { color: #5f6368 !important; }
+
+[class~="text-[#00ff88]"] { color: #1a73e8 !important; }
+[class~="text-[#4d9fff]"] { color: #1967d2 !important; }
+[class~="bg-[#00ff88]"] { background-color: #1a73e8 !important; }
+[class~="hover:bg-[#00cc6a]"]:hover { background-color: #1765cc !important; }
+[class~="text-[#060d1f]"] { color: #ffffff !important; }
+
+[class~="border-white/5"],
+[class~="border-white/10"],
+[class~="border-white/20"] { border-color: #dadce0 !important; }
+[class~="bg-white/5"], [class~="bg-white/10"] { background-color: #f1f3f4 !important; }
+
+[style*="rgba(255,255,255,0.02)"],
+[style*="rgba(255, 255, 255, 0.02)"],
+[style*="rgba(255,255,255,0.03)"],
+[style*="rgba(255, 255, 255, 0.03)"],
+[style*="rgba(6,13,31"],
+[style*="rgba(6, 13, 31"],
+[style*="#060d1f"],
+[style*="#030810"] {
+  background: #ffffff !important;
+  border-color: #dadce0 !important;
+}
+
+input, textarea, select {
+  color: #202124;
+  background-color: #ffffff;
+}
+
+input::placeholder, textarea::placeholder { color: #80868b; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(66, 133, 244, 0.28);
+  outline-offset: 2px;
 }
 
 /* ─── Reduced motion ─── */
