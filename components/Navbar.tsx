@@ -37,7 +37,7 @@ export default function Navbar() {
         <nav
           className="w-full max-w-7xl flex items-center justify-between h-14 px-5 rounded-2xl transition-all duration-300"
           style={{
-            background: scrolled ? "rgba(6,13,31,0.92)" : "rgba(6,13,31,0.6)",
+            background: scrolled ? "rgba(255,255,255,0.96)" : "rgba(255,255,255,0.88)",
             backdropFilter: "blur(20px)",
             border: scrolled
               ? "1px solid rgba(255,255,255,0.12)"

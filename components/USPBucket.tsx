@@ -46,7 +46,7 @@ export default function USPBucket() {
       <div
         ref={stickyRef}
         className="md:sticky top-0 min-h-screen md:h-screen flex items-center justify-center overflow-hidden py-20 md:py-0"
-        style={{ background: "#07101f" }}
+        style={{ background: "#ffffff" }}
       >
         <div className="absolute inset-0" style={{
           background: "radial-gradient(ellipse at 70% 40%, rgba(77,159,255,0.07) 0%, transparent 55%)"
@@ -69,9 +69,9 @@ export default function USPBucket() {
           <div
             className={`relative rounded-2xl overflow-hidden transition-all duration-[700ms] delay-200 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             style={{
-              background: "linear-gradient(135deg, rgba(13,27,58,0.95) 0%, rgba(6,13,31,0.98) 100%)",
-              border: allDone ? "1px solid rgba(0,255,136,0.35)" : "1px solid rgba(77,159,255,0.2)",
-              boxShadow: allDone ? "0 0 40px rgba(0,255,136,0.12)" : "none",
+              background: "linear-gradient(135deg, #ffffff 0%, #f8fafd 100%)",
+              border: allDone ? "1px solid #81c995" : "1px solid #d2e3fc",
+              boxShadow: allDone ? "0 8px 28px rgba(52,168,83,0.12)" : "0 3px 14px rgba(60,64,67,0.10)",
               transition: "all 0.5s ease",
             }}
           >

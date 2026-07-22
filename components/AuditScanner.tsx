@@ -55,7 +55,7 @@ export default function AuditScanner() {
       <div
         ref={stickyRef}
         className="md:sticky top-0 min-h-screen md:h-screen flex items-center justify-center overflow-hidden py-20 md:py-0"
-        style={{ background: "#060d1f" }}
+        style={{ background: "#f8fafd" }}
       >
         <div className="absolute inset-0" style={{
           background: "radial-gradient(ellipse at 25% 50%, rgba(0,255,136,0.07) 0%, transparent 55%)"

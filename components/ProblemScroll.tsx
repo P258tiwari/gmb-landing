@@ -90,7 +90,7 @@ export default function ProblemScroll() {
       <div
         ref={stickyRef}
         className="md:sticky top-0 min-h-screen md:h-screen flex flex-col items-center justify-center overflow-hidden"
-        style={{ background: "#07101f" }}
+        style={{ background: "#f8fafd" }}
       >
         {/* Background blurred map grid */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.035]" style={{

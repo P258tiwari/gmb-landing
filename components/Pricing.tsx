@@ -15,7 +15,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" ref={ref} className="py-24 lg:py-32 relative overflow-hidden" style={{ background: "#030810" }}>
+    <section id="pricing" ref={ref} className="py-24 lg:py-32 relative overflow-hidden" style={{ background: "#f8fafd" }}>
       <div className="absolute inset-0 pointer-events-none" style={{
         background: "radial-gradient(ellipse at 50% 0%, rgba(77,159,255,0.07) 0%, transparent 60%)"
       }} />
@@ -106,13 +106,13 @@ export default function Pricing() {
               style={
                 plan.popular
                   ? {
-                      background: "linear-gradient(145deg, rgba(0,40,20,0.95) 0%, rgba(0,12,5,0.98) 100%)",
-                      border: "1px solid rgba(0,255,136,0.4)",
-                      boxShadow: "0 0 60px rgba(0,255,136,0.1)",
+                      background: "linear-gradient(145deg, #ffffff 0%, #f3f8ff 100%)",
+                      border: "2px solid #4285f4",
+                      boxShadow: "0 10px 32px rgba(66,133,244,0.16)",
                     }
                   : {
-                      background: "rgba(255,255,255,0.02)",
-                      border: "1px solid rgba(255,255,255,0.07)",
+                      background: "#ffffff",
+                      border: "1px solid #dadce0",
                     }
               }
             >

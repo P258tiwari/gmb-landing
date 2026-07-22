@@ -213,7 +213,7 @@ export default function Hero() {
   return (
     <section ref={ref} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background layers */}
-      <div className="absolute inset-0" style={{ background: "#060d1f" }} />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #ffffff 0%, #f8fafd 100%)" }} />
 
       {/* Grid */}
       <div className="absolute inset-0 opacity-[0.04]" style={{

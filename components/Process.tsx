@@ -12,7 +12,7 @@ export default function Process() {
   const inView = useInView(ref, "-60px");
 
   return (
-    <section id="how-it-works" ref={ref} className="py-24 lg:py-36 relative overflow-hidden" style={{ background: "#060d1f" }}>
+    <section id="how-it-works" ref={ref} className="py-24 lg:py-36 relative overflow-hidden" style={{ background: "#ffffff" }}>
       <div className="absolute inset-0 pointer-events-none" style={{
         background: "radial-gradient(ellipse at 50% 50%, rgba(0,255,136,0.04) 0%, transparent 65%)"
       }} />

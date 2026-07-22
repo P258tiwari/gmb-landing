@@ -190,6 +190,55 @@ body {
   border-color: #dadce0 !important;
 }
 
+/* Every marketing section now owns a light surface. Several animated sections
+   set their old navy background inline, so this rule must be important. */
+main > section,
+main > div > section {
+  background: #ffffff !important;
+}
+
+main > section:nth-of-type(even) {
+  background: #f8fafd !important;
+}
+
+/* Legacy dark cards that used green/navy inline gradients. */
+[style*="rgba(0,40,20"],
+[style*="rgba(0, 40, 20"],
+[style*="rgba(0,12,5"],
+[style*="rgba(0, 12, 5"],
+[style*="rgba(13,27,58"],
+[style*="rgba(13, 27, 58"],
+[style*="#08111f"] {
+  background: #ffffff !important;
+  border-color: #dadce0 !important;
+  box-shadow: 0 2px 12px rgba(60, 64, 67, 0.1) !important;
+}
+
+/* Inline CTA styles are used by interactive components and cannot be remapped
+   through Tailwind theme variables. */
+[style*="background: #00ff88"],
+[style*="background: rgb(0, 255, 136)"],
+[style*="background-color: #00ff88"],
+[style*="background-color: rgb(0, 255, 136)"] {
+  background: #1a73e8 !important;
+  color: #ffffff !important;
+}
+
+[style*="color: #00ff88"],
+[style*="color: rgb(0, 255, 136)"] { color: #1a73e8 !important; }
+
+[style*="color: #4d9fff"],
+[style*="color: rgb(77, 159, 255)"] { color: #1967d2 !important; }
+
+/* Ensure white cards and panels always inherit readable dark copy. */
+.glass-card,
+.maps-card,
+.pricing-popular,
+[style*="background: #ffffff"],
+[style*="background: rgb(255, 255, 255)"] {
+  color: #202124;
+}
+
 input, textarea, select {
   color: #202124;
   background-color: #ffffff;
