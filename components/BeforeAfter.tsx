@@ -2,272 +2,67 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { X, Check, Phone, Navigation2, Star, TrendingUp, ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowRight, Check, ChevronRight, MapPin, Search, Star, TrendingUp, X } from "lucide-react";
 
-const beforeItems = [
-  { text: "Rank #14 on Google Maps" },
-  { text: "Incomplete business profile" },
-  { text: "No recent posts or updates" },
-  { text: "Unanswered customer reviews" },
-  { text: "Only 2 calls per month" },
-];
+const beforeItems = ["Rank #14 on Google Maps", "Incomplete business profile", "No recent posts or updates", "Unanswered customer reviews", "Only 2 calls per month"];
+const afterItems = ["Top 3 ranking on Google Maps", "100% fully optimized profile", "Fresh posts every week", "Proactive review management", "10x calls increase"];
 
-const afterItems = [
-  { text: "Top 3 ranking on Google Maps" },
-  { text: "100% fully optimized profile" },
-  { text: "Fresh posts every week" },
-  { text: "Proactive review management" },
-  { text: "10x calls increase" },
-];
+type PlacePanelProps = { optimized?: boolean; inView: boolean };
+
+function PlacePanel({ optimized = false, inView }: PlacePanelProps) {
+  const items = optimized ? afterItems : beforeItems;
+  const accent = optimized ? "#34a853" : "#d93025";
+
+  return (
+    <motion.article initial={{ opacity: 0, x: optimized ? 40 : -40 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: .7, delay: optimized ? .3 : .2 }} className="flex min-w-0 flex-1 flex-col overflow-hidden rounded-[22px] border border-[#dadce0] bg-white shadow-[0_18px_55px_rgba(0,0,0,.24)]">
+      <div className="flex items-center gap-2 border-b border-[#e8eaed] px-5 py-3.5"><span className="h-2 w-2 rounded-full" style={{ background: accent }} /><span className="text-[11px] font-bold uppercase tracking-[.14em]" style={{ color: accent }}>{optimized ? "After Get Real Flow" : "Before Get Real Flow"}</span></div>
+
+      <div className="border-b border-[#e8eaed] px-4 pb-3 pt-4">
+        <div className="flex items-center rounded-full border border-[#dadce0] px-4 py-2.5 shadow-sm"><span className="flex-1 text-[11px] text-[#3c4043]">your business near me</span><Search className="h-4 w-4 text-[#4285f4]" /></div>
+        <div className="mt-3 flex gap-5 px-2 text-[9px] text-[#5f6368]"><span>All</span><span className="border-b-2 border-[#1a73e8] pb-1.5 font-semibold text-[#1a73e8]">Maps</span><span>Images</span><span>More</span></div>
+      </div>
+
+      <div className="flex-1 p-4 text-[#202124]">
+        <div className="mb-3 flex items-center gap-1.5 text-[10px] font-semibold"><MapPin className="h-3.5 w-3.5" /> Kanpur, Uttar Pradesh</div>
+        <div className="overflow-hidden rounded-xl border border-[#dadce0]">
+          <div className="relative h-28 overflow-hidden bg-[#e8f0e8]" style={{ backgroundImage: "linear-gradient(32deg, transparent 46%, #fff 47%, #fff 52%, transparent 53%), linear-gradient(145deg, transparent 43%, #fff 44%, #fff 49%, transparent 50%), linear-gradient(90deg, rgba(174,203,223,.42) 1px, transparent 1px), linear-gradient(rgba(174,203,223,.42) 1px, transparent 1px)", backgroundSize: "150px 110px, 170px 130px, 38px 38px, 38px 38px" }}>
+            <div className="absolute right-[-8%] top-1 h-8 w-36 -rotate-12 bg-[#a8dff0]" /><div className="absolute left-[35%] top-[43%] text-[12px] font-bold text-[#5f6368]">KANPUR</div>
+            {[[18,25],[72,20],[24,70],[78,68]].map(([left, top], index) => <MapPin key={index} className="absolute h-4 w-4 fill-[#ea4335] text-white" style={{ left: `${left}%`, top: `${top}%` }} />)}
+            <motion.div initial={{ left: optimized ? "82%" : "86%", top: optimized ? "80%" : "82%" }} animate={inView && optimized ? { left: "53%", top: "31%" } : {}} transition={{ delay: .8, duration: 1.2 }} className="absolute"><MapPin className={`h-7 w-7 text-white drop-shadow ${optimized ? "fill-[#4285f4]" : "fill-[#9aa0a6]"}`} /></motion.div>
+            <span className="absolute bottom-1 left-2 rounded bg-white/80 px-1 text-[7px] text-[#70757a]">Map data ©2026</span>
+          </div>
+
+          <div className="flex gap-3 bg-white p-3">
+            <div className="h-16 w-16 shrink-0 rounded-lg bg-gradient-to-br from-[#d9c9b5] via-[#f7f2eb] to-[#b7d7d4]"><div className="m-auto mt-4 h-8 w-10 rounded bg-white/70 shadow-sm" /></div>
+            <div className="min-w-0 flex-1"><div className="flex items-start justify-between gap-2"><span className="truncate text-[12px] font-semibold">Your Business</span><span className="rounded-full px-2 py-1 text-[8px] font-bold" style={{ color: accent, background: optimized ? "#e6f4ea" : "#fce8e6" }}>{optimized ? "TOP 3" : "RANK #14"}</span></div><div className="mt-1 flex items-center text-[9px] text-[#5f6368]"><span>{optimized ? "4.8" : "3.2"}</span><span className="mx-1 flex">{[0,1,2,3,4].map((star) => <Star key={star} className={`h-2.5 w-2.5 ${optimized || star < 2 ? "fill-[#fbbc04] text-[#fbbc04]" : "text-[#dadce0]"}`} />)}</span><span>({optimized ? "127" : "8"}) · Business</span></div><div className="mt-1 text-[9px] text-[#70757a]">Open · On-site services</div><button className="mt-1.5 rounded-full border border-[#dadce0] px-3 py-1 text-[8px] font-semibold text-[#1a73e8]">{optimized ? "Call now" : "View details"}</button></div>
+          </div>
+        </div>
+
+        <div className="mt-4 space-y-2.5">{items.map((item, index) => <motion.div key={item} initial={{ opacity: 0, x: optimized ? 10 : -10 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: .48 + index * .07 }} className="flex items-center gap-3"><span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full" style={{ background: optimized ? "#e6f4ea" : "#fce8e6" }}>{optimized ? <Check className="h-3 w-3 text-[#137333]" /> : <X className="h-3 w-3 text-[#c5221f]" />}</span><span className="text-[12px] text-[#3c4043]">{item}</span></motion.div>)}</div>
+      </div>
+
+      <div className="mx-4 mb-4 flex items-center justify-between rounded-full px-4 py-2.5 text-[10px] font-semibold" style={{ color: accent, background: optimized ? "#e6f4ea" : "#fce8e6" }}><span>{optimized ? "10x calls increase · Rank #2" : "2 calls / month · Rank #14"}</span><ChevronRight className="h-3.5 w-3.5" /></div>
+    </motion.article>
+  );
+}
 
 export default function BeforeAfter() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section
-      id="before-after"
-      ref={ref}
-      className="py-24 lg:py-32 relative overflow-hidden"
-      style={{ background: "#060d1f" }}
-    >
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at 50% 90%, rgba(0,255,136,0.05) 0%, transparent 55%)",
-        }}
-      />
+    <section id="before-after" ref={ref} className="relative overflow-hidden bg-[#060d1f] py-24 lg:py-32">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_90%,rgba(0,255,136,.05),transparent_55%)]" />
+      <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mb-14 text-center"><motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} className="mb-5 inline-flex items-center gap-2 rounded-full border border-[rgba(0,255,136,.3)] bg-[rgba(0,255,136,.06)] px-3 py-1.5"><TrendingUp className="h-3 w-3 text-[#00ff88]" /><span className="text-xs font-medium text-[#00ff88]">Real Transformation</span></motion.div><motion.h2 initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: .1 }} className="text-3xl font-black text-white sm:text-5xl lg:text-6xl">From invisible to <span className="text-gradient-neon">searchable.</span></motion.h2><motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: .25 }} className="mx-auto mt-4 max-w-md text-base text-[#8899bb]">See exactly what changes when Get Real Flow optimizes your Google Business Profile.</motion.p></div>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-14">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(0,255,136,0.3)] bg-[rgba(0,255,136,0.06)] mb-5"
-          >
-            <TrendingUp className="w-3 h-3 text-[#00ff88]" />
-            <span className="text-[#00ff88] text-xs font-medium">Real Transformation</span>
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl lg:text-6xl font-black text-white"
-          >
-            From invisible to{" "}
-            <span className="text-gradient-neon">searchable.</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.25 }}
-            className="mt-4 text-[#8899bb] text-base max-w-md mx-auto"
-          >
-            See exactly what changes when Get Real Flow optimizes your Google Business Profile.
-          </motion.p>
+        <div className="flex flex-col items-stretch gap-4 lg:flex-row">
+          <PlacePanel inView={inView} />
+          <motion.div initial={{ opacity: 0, scale: 0 }} animate={inView ? { opacity: 1, scale: 1 } : {}} transition={{ delay: .55, type: "spring", stiffness: 200 }} className="flex shrink-0 flex-col items-center justify-center gap-3 py-4 lg:px-2 lg:py-0"><div className="h-10 w-px bg-gradient-to-b from-transparent to-[rgba(0,255,136,.4)] lg:h-20" /><div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[rgba(0,255,136,.5)] bg-[rgba(0,255,136,.08)] shadow-[0_0_30px_rgba(0,255,136,.2)]"><ArrowDown className="h-5 w-5 text-[#00ff88] lg:hidden" /><ArrowRight className="hidden h-5 w-5 text-[#00ff88] lg:block" /></div><div className="text-center"><div className="text-xs font-bold text-[#00ff88]">6 months</div><div className="text-[10px] text-[#8899bb]">guaranteed</div></div><div className="h-10 w-px bg-gradient-to-b from-[rgba(0,255,136,.4)] to-transparent lg:h-20" /></motion.div>
+          <PlacePanel optimized inView={inView} />
         </div>
 
-        {/* ── Side-by-side row ── */}
-        <div className="flex flex-col lg:flex-row items-stretch gap-4">
-
-          {/* ── BEFORE card ── */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="flex-1 flex flex-col rounded-2xl overflow-hidden"
-            style={{
-              background: "linear-gradient(145deg, rgba(35,8,8,0.95) 0%, rgba(12,3,3,0.98) 100%)",
-              border: "1px solid rgba(239,68,68,0.22)",
-            }}
-          >
-            {/* Label bar */}
-            <div
-              className="px-5 py-3 flex items-center gap-2 border-b"
-              style={{ borderColor: "rgba(239,68,68,0.12)" }}
-            >
-              <div className="w-2 h-2 rounded-full bg-red-500" />
-              <span className="text-red-400 text-xs font-bold uppercase tracking-widest">
-                Before Get Real Flow
-              </span>
-            </div>
-
-            {/* Fake Maps result */}
-            <div className="mx-4 mt-4 rounded-xl p-4" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-xs font-bold text-[#8899bb]">
-                  14
-                </div>
-                <span className="text-[#8899bb] text-sm font-medium">Your Business</span>
-                <span className="ml-auto text-[10px] text-red-400 font-semibold">Not in Top 10</span>
-              </div>
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-3 h-3 ${i < 2 ? "text-yellow-400 fill-current" : "text-white/10"}`}
-                  />
-                ))}
-                <span className="text-[10px] text-[#8899bb] ml-1.5">3.2 · 8 reviews</span>
-              </div>
-              <div className="flex gap-2">
-                <div className="flex-1 py-2 rounded-lg bg-white/5 text-[#8899bb] text-[10px] flex items-center justify-center gap-1">
-                  <Phone className="w-2.5 h-2.5" /> Call
-                </div>
-                <div className="flex-1 py-2 rounded-lg bg-white/5 text-[#8899bb] text-[10px] flex items-center justify-center gap-1">
-                  <Navigation2 className="w-2.5 h-2.5" /> Directions
-                </div>
-              </div>
-            </div>
-
-            {/* Checklist */}
-            <div className="px-4 py-4 flex-1 space-y-2.5">
-              {beforeItems.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.45 + i * 0.07 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-5 h-5 rounded-full bg-red-500/12 flex items-center justify-center flex-shrink-0">
-                    <X className="w-3 h-3 text-red-400" />
-                  </div>
-                  <span className="text-[#8899bb] text-sm">{item.text}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Footer stat */}
-            <div className="mx-4 mb-4 py-3 rounded-xl text-center" style={{ background: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.12)" }}>
-              <span className="text-red-400 text-xs font-semibold">2 calls / month · Rank #14</span>
-            </div>
-          </motion.div>
-
-          {/* ── Center arrow ── */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.55, type: "spring", stiffness: 200 }}
-            className="flex flex-col items-center justify-center gap-3 lg:gap-4 py-4 lg:py-0 lg:px-2 flex-shrink-0"
-          >
-            <div className="h-12 lg:h-20 w-px" style={{ background: "linear-gradient(180deg, transparent, rgba(0,255,136,0.4))" }} />
-            <div
-              className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-              style={{
-                border: "2px solid rgba(0,255,136,0.5)",
-                background: "rgba(0,255,136,0.08)",
-                boxShadow: "0 0 30px rgba(0,255,136,0.2)",
-              }}
-            >
-              <ArrowDown className="w-5 h-5 text-[#00ff88] lg:hidden" />
-              <ArrowRight className="w-5 h-5 text-[#00ff88] hidden lg:block" />
-            </div>
-            <div className="text-center">
-              <div className="text-[#00ff88] text-xs font-bold">6 months</div>
-              <div className="text-[#8899bb] text-[10px]">guaranteed</div>
-            </div>
-            <div className="h-12 lg:h-20 w-px" style={{ background: "linear-gradient(180deg, rgba(0,255,136,0.4), transparent)" }} />
-          </motion.div>
-
-          {/* ── AFTER card ── */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex-1 flex flex-col rounded-2xl overflow-hidden"
-            style={{
-              background: "linear-gradient(145deg, rgba(0,35,15,0.95) 0%, rgba(0,12,5,0.98) 100%)",
-              border: "1px solid rgba(0,255,136,0.3)",
-              boxShadow: "0 0 50px rgba(0,255,136,0.07)",
-            }}
-          >
-            {/* Label bar */}
-            <div
-              className="px-5 py-3 flex items-center gap-2 border-b"
-              style={{ borderColor: "rgba(0,255,136,0.12)" }}
-            >
-              <div className="w-2 h-2 rounded-full bg-[#00ff88]" />
-              <span className="text-[#00ff88] text-xs font-bold uppercase tracking-widest">
-                After Get Real Flow
-              </span>
-            </div>
-
-            {/* Fake Maps result */}
-            <div className="mx-4 mt-4 rounded-xl p-4" style={{ background: "rgba(0,255,136,0.05)", border: "1px solid rgba(0,255,136,0.2)" }}>
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-7 h-7 rounded-lg bg-[rgba(0,255,136,0.18)] flex items-center justify-center text-xs font-bold text-[#00ff88]">
-                  2
-                </div>
-                <span className="text-white text-sm font-semibold">Your Business</span>
-                <span className="ml-auto text-[10px] text-[#00ff88] font-bold">TOP 3 ✓</span>
-              </div>
-              <div className="flex items-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 text-[#00ff88] fill-current" />
-                ))}
-                <span className="text-[10px] text-[#8899bb] ml-1.5">4.8 · 127 reviews</span>
-              </div>
-              <div className="flex gap-2">
-                <div className="flex-1 py-2 rounded-lg bg-[#00ff88] text-[#060d1f] text-[10px] flex items-center justify-center gap-1 font-bold">
-                  <Phone className="w-2.5 h-2.5" /> Call Now
-                </div>
-                <div className="flex-1 py-2 rounded-lg border border-[rgba(0,255,136,0.3)] text-[#00ff88] text-[10px] flex items-center justify-center gap-1">
-                  <Navigation2 className="w-2.5 h-2.5" /> Directions
-                </div>
-              </div>
-            </div>
-
-            {/* Checklist */}
-            <div className="px-4 py-4 flex-1 space-y-2.5">
-              {afterItems.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.5 + i * 0.07 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-5 h-5 rounded-full bg-[rgba(0,255,136,0.1)] flex items-center justify-center flex-shrink-0">
-                    <Check className="w-3 h-3 text-[#00ff88]" />
-                  </div>
-                  <span className="text-white text-sm">{item.text}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Footer stat */}
-            <div className="mx-4 mb-4 py-3 rounded-xl text-center" style={{ background: "rgba(0,255,136,0.08)", border: "1px solid rgba(0,255,136,0.2)" }}>
-              <span className="text-[#00ff88] text-xs font-semibold">10x calls increase · Rank #2 on Maps</span>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Bottom stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.75 }}
-          className="mt-10 grid grid-cols-3 gap-3"
-        >
-          {[
-            { label: "Avg. Call Growth", value: "10x" },
-            { label: "Target Ranking", value: "Top 3" },
-            { label: "Guarantee Period", value: "6 mo" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="glass-card rounded-xl px-6 py-3 text-center"
-              style={{ border: "1px solid rgba(255,255,255,0.06)" }}
-            >
-              <div className="text-xl font-black text-gradient-neon">{stat.value}</div>
-              <div className="text-[#8899bb] text-[11px] mt-0.5">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: .75 }} className="mt-10 grid grid-cols-3 gap-3">{[["10x","Avg. Call Growth"],["Top 3","Target Ranking"],["6 mo","Guarantee Period"]].map(([value,label]) => <div key={label} className="glass-card rounded-xl px-3 py-3 text-center"><div className="text-xl font-black text-gradient-neon">{value}</div><div className="mt-0.5 text-[11px] text-[#8899bb]">{label}</div></div>)}</motion.div>
       </div>
     </section>
   );

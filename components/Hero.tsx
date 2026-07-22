@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { MapPin, Star, Phone, Navigation2, ChevronDown, TrendingUp } from "lucide-react";
+import GoogleMapsCard from "./GoogleMapsCard";
 
 const mockTopResults = [
   { rank: 1, name: "Sharma Dental Clinic", rating: 4.9, reviews: 312, distance: "0.3 km", open: true },
@@ -23,6 +24,8 @@ function FloatingPin({ style }: { style: React.CSSProperties }) {
   );
 }
 
+// Kept as a legacy visual reference while the Google-style card is in use.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function AnimatedMapsCard() {
   const [currentRank, setCurrentRank] = useState(14);
 
@@ -327,7 +330,7 @@ export default function Hero() {
 
           {/* Right — Maps card */}
           <div className="relative">
-            <AnimatedMapsCard />
+            <GoogleMapsCard />
 
             {/* Floating badges */}
             <motion.div
