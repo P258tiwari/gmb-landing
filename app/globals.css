@@ -4,10 +4,10 @@
   --color-navy: #ffffff;
   --color-navy-light: #f8fafd;
   --color-navy-card: #ffffff;
-  --color-neon: #1a73e8;
-  --color-neon-dim: #1765cc;
-  --color-blue-accent: #4285f4;
-  --color-blue-dim: #d2e3fc;
+  --color-neon: #2478e5;
+  --color-neon-dim: #1b63c3;
+  --color-blue-accent: #2478e5;
+  --color-blue-dim: #dbeafe;
   --color-glass: rgba(255, 255, 255, 0.92);
   --color-glass-border: #dadce0;
   --color-text-muted: #5f6368;
@@ -59,8 +59,8 @@ body {
 }
 
 ::selection {
-  background: #d2e3fc;
-  color: #174ea6;
+  background: #dbeafe;
+  color: #071128;
 }
 
 ::-webkit-scrollbar {
@@ -83,21 +83,21 @@ body {
 
 /* ─── Borders / glows ─── */
 .neon-border {
-  border: 1px solid #a8c7fa;
+  border: 1px solid #9fc5ff;
   box-shadow: 0 1px 3px rgba(60, 64, 67, 0.12);
 }
 
 .neon-glow {
-  box-shadow: 0 8px 28px rgba(26, 115, 232, 0.18);
+  box-shadow: 0 8px 28px rgba(36, 120, 229, 0.18);
 }
 
 .blue-glow {
-  box-shadow: 0 8px 28px rgba(66, 133, 244, 0.16);
+  box-shadow: 0 8px 28px rgba(36, 120, 229, 0.16);
 }
 
 /* ─── Gradients ─── */
 .text-gradient-neon {
-  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 58%, #34a853 100%);
+  background: linear-gradient(135deg, #071128 0%, #2478e5 58%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -116,7 +116,7 @@ body {
   top: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #4285f4, #34a853, #fbbc04, #ea4335);
+  background: linear-gradient(90deg, #071128, #2478e5, #60a5fa);
   z-index: 9999;
   transform-origin: left;
 }
@@ -130,16 +130,16 @@ body {
 
 /* ─── Chip ─── */
 .chip-item {
-  background: #e8f0fe;
-  border: 1px solid #d2e3fc;
-  color: #1967d2;
+  background: #eaf2ff;
+  border: 1px solid #dbeafe;
+  color: #1b63c3;
 }
 
 /* ─── Pricing popular card ─── */
 .pricing-popular {
   background: linear-gradient(145deg, #ffffff 0%, #f3f8ff 100%);
-  border: 2px solid #4285f4 !important;
-  box-shadow: 0 8px 28px rgba(66, 133, 244, 0.14);
+  border: 2px solid #2478e5 !important;
+  box-shadow: 0 8px 28px rgba(36, 120, 229, 0.14);
 }
 
 /* ─── Section dividers ─── */
@@ -167,10 +167,10 @@ body {
 [class~="text-[#445566]"],
 [class~="text-[#ccd6f0]"] { color: #5f6368 !important; }
 
-[class~="text-[#00ff88]"] { color: #1a73e8 !important; }
-[class~="text-[#4d9fff]"] { color: #1967d2 !important; }
-[class~="bg-[#00ff88]"] { background-color: #1a73e8 !important; }
-[class~="hover:bg-[#00cc6a]"]:hover { background-color: #1765cc !important; }
+[class~="text-[#00ff88]"] { color: #2478e5 !important; }
+[class~="text-[#4d9fff]"] { color: #1b63c3 !important; }
+[class~="bg-[#00ff88]"] { background-color: #2478e5 !important; }
+[class~="hover:bg-[#00cc6a]"]:hover { background-color: #1b63c3 !important; }
 [class~="text-[#060d1f]"] { color: #ffffff !important; }
 
 [class~="border-white/5"],
@@ -220,15 +220,15 @@ main > section:nth-of-type(even) {
 [style*="background: rgb(0, 255, 136)"],
 [style*="background-color: #00ff88"],
 [style*="background-color: rgb(0, 255, 136)"] {
-  background: #1a73e8 !important;
+  background: #2478e5 !important;
   color: #ffffff !important;
 }
 
 [style*="color: #00ff88"],
-[style*="color: rgb(0, 255, 136)"] { color: #1a73e8 !important; }
+[style*="color: rgb(0, 255, 136)"] { color: #2478e5 !important; }
 
 [style*="color: #4d9fff"],
-[style*="color: rgb(77, 159, 255)"] { color: #1967d2 !important; }
+[style*="color: rgb(77, 159, 255)"] { color: #1b63c3 !important; }
 
 /* Ensure white cards and panels always inherit readable dark copy. */
 .glass-card,
@@ -248,7 +248,7 @@ input::placeholder, textarea::placeholder { color: #80868b; }
 
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 3px solid rgba(66, 133, 244, 0.28);
+  outline: 3px solid rgba(36, 120, 229, 0.28);
   outline-offset: 2px;
 }
 

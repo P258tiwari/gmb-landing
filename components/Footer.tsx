@@ -42,7 +42,7 @@ export default function Footer() {
 
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image src="/logo.png" alt="Get Real Flow" width={120} height={32} className="h-8 w-auto object-contain" />
+            <Image src="/logo.png" alt="GetRealFlow" width={1200} height={280} className="h-8 w-auto object-contain" />
           </div>
 
           {/* Contact details */}

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const lastY = useRef(0);
   const { scrollYProgress } = useScroll();
   const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
@@ -15,10 +15,13 @@ export default function Navbar() {
   useEffect(() => {
     const handler = () => {
       const y = window.scrollY;
-      setScrolled(y > 40);
-      setVisible(y < lastY.current);
+      const isPastThreshold = y > 100;
+
+      setScrolled(isPastThreshold);
+      setVisible(!isPastThreshold || y < lastY.current);
       lastY.current = y;
     };
+    handler();
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
@@ -31,6 +34,7 @@ export default function Navbar() {
       {/* Floating pill navbar */}
       <motion.div
         className="fixed top-0 left-0 right-0 z-[100] flex justify-center px-6 lg:px-8 pt-4"
+        initial={false}
         animate={{ y: visible ? 0 : "-150%" }}
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       >
@@ -53,7 +57,7 @@ export default function Navbar() {
             className="flex items-center flex-shrink-0"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
           >
-            <Image src="/logo.png" alt="Get Real Flow" width={130} height={36} className="h-9 w-auto object-contain" priority />
+            <Image src="/logo.png" alt="GetRealFlow" width={1200} height={280} className="h-8 w-auto object-contain" priority />
           </Link>
 
           {/* CTA */}

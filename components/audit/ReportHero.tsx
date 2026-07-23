@@ -50,9 +50,9 @@ export default function ReportHero({ report }: Props) {
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
               src="/logo.png"
-              alt="Get Real Flow"
-              width={130}
-              height={36}
+              alt="GetRealFlow"
+              width={1200}
+              height={280}
               className="h-9 w-auto object-contain"
               priority
             />

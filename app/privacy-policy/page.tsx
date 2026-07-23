@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
       <header className="border-b border-white/5 py-4 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/">
-            <Image src="/logo.png" alt="Get Real Flow" width={130} height={36} className="h-9 w-auto object-contain" />
+            <Image src="/logo.png" alt="GetRealFlow" width={1200} height={280} className="h-9 w-auto object-contain" />
           </Link>
           <Link href="/" className="text-[#8899bb] text-sm hover:text-white transition-colors">← Back to Home</Link>
         </div>

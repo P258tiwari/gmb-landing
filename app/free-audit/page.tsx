@@ -43,9 +43,9 @@ export default function FreeAuditPage() {
           <Link href="/">
             <Image
               src="/logo.png"
-              alt="Get Real Flow"
-              width={120}
-              height={32}
+              alt="GetRealFlow"
+              width={1200}
+              height={280}
               className="h-8 w-auto object-contain"
             />
           </Link>

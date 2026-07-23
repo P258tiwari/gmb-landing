@@ -26,7 +26,7 @@ export default function ManualReview({ report }: Props) {
       <header className="border-b border-white/5 py-4 px-6">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <Link href="/">
-            <Image src="/logo.png" alt="Get Real Flow" width={110} height={30} className="h-8 w-auto object-contain" />
+            <Image src="/logo.png" alt="GetRealFlow" width={1200} height={280} className="h-8 w-auto object-contain" />
           </Link>
           <Link href="/" className="text-[#8899bb] text-sm hover:text-white transition-colors">← Home</Link>
         </div>
