@@ -17,17 +17,17 @@ const tiers = [
     plan: "Growth",
     keywords: 5,
     icon: TrendingUp,
-    color: "#00ff88",
-    bg: "rgba(0,255,136,0.08)",
-    border: "rgba(0,255,136,0.3)",
+    color: "#2478e5",
+    bg: "rgba(36,120,229,0.08)",
+    border: "rgba(36,120,229,0.3)",
   },
   {
     plan: "Max",
     keywords: 8,
     icon: BadgeCheck,
-    color: "#00ff88",
-    bg: "rgba(0,255,136,0.12)",
-    border: "rgba(0,255,136,0.45)",
+    color: "#071128",
+    bg: "rgba(36,120,229,0.12)",
+    border: "rgba(36,120,229,0.45)",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function Guarantee() {
     <section id="guarantee" ref={ref} className="py-24 lg:py-36 relative overflow-hidden" style={{ background: "#060d1f" }}>
       {/* Glow */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse at 50% 40%, rgba(0,255,136,0.1) 0%, transparent 60%)"
+        background: "radial-gradient(ellipse at 50% 40%, rgba(36,120,229,0.16) 0%, transparent 62%)"
       }} />
       <div className="absolute inset-0 opacity-[0.025] pointer-events-none" style={{
         backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
@@ -56,9 +56,9 @@ export default function Guarantee() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="flex items-center justify-center w-20 h-20 rounded-2xl"
             style={{
-              background: "linear-gradient(135deg, rgba(0,255,136,0.2) 0%, rgba(0,255,136,0.05) 100%)",
-              border: "1.5px solid rgba(0,255,136,0.45)",
-              boxShadow: "0 0 50px rgba(0,255,136,0.25), 0 0 100px rgba(0,255,136,0.1)",
+              background: "linear-gradient(135deg, rgba(36,120,229,0.2) 0%, rgba(36,120,229,0.05) 100%)",
+              border: "1.5px solid rgba(36,120,229,0.45)",
+              boxShadow: "0 18px 55px rgba(36,120,229,0.22), 0 0 0 8px rgba(36,120,229,0.05)",
             }}
           >
             <BadgeCheck className="w-9 h-9 text-[#00ff88]" strokeWidth={1.5} />
@@ -173,7 +173,7 @@ export default function Guarantee() {
             whileHover={{ scale: 1.03, boxShadow: "0 0 35px rgba(0,255,136,0.35)" }}
             whileTap={{ scale: 0.97 }}
             className="px-8 py-4 rounded-xl font-bold text-base"
-            style={{ background: "#00ff88", color: "#060d1f" }}
+            style={{ background: "#2478e5", color: "#ffffff", boxShadow: "0 12px 30px rgba(36,120,229,0.28)" }}
           >
             Claim Your Free Audit →
           </motion.button>

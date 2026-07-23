@@ -19,7 +19,7 @@ const PLATFORMS = [
     description: "We set up the Maps campaign only",
     setupFee: 3000,
     badge: "No account needed",
-    badgeColor: "#00ff88",
+    badgeColor: "#2478e5",
   },
 ] as const;
 
@@ -128,10 +128,10 @@ function CalcModal({
                   className="relative p-3.5 rounded-xl text-left transition-all duration-200"
                   style={{
                     background: platform === p.id
-                      ? `rgba(${p.id === "client" ? "77,159,255" : "0,255,136"},0.1)`
+                      ? "rgba(36,120,229,0.1)"
                       : "rgba(255,255,255,0.03)",
                     border: `1px solid ${platform === p.id
-                      ? (p.id === "client" ? "rgba(77,159,255,0.4)" : "rgba(0,255,136,0.4)")
+                      ? "rgba(36,120,229,0.4)"
                       : "rgba(255,255,255,0.07)"}`,
                   }}
                 >
@@ -326,10 +326,10 @@ We run Google Maps ads to put your business at the very top of Maps results — 
                     className="relative p-3 rounded-xl text-left transition-all duration-200"
                     style={{
                       background: platform === p.id
-                        ? `rgba(${p.id === "client" ? "77,159,255" : "0,255,136"},0.09)`
+                        ? "rgba(36,120,229,0.09)"
                         : "rgba(255,255,255,0.03)",
                       border: `1px solid ${platform === p.id
-                        ? (p.id === "client" ? "rgba(77,159,255,0.35)" : "rgba(0,255,136,0.35)")
+                        ? "rgba(36,120,229,0.35)"
                         : "rgba(255,255,255,0.07)"}`,
                     }}
                   >

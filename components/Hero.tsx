@@ -223,7 +223,7 @@ export default function Hero() {
 
       {/* Glow blobs */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full opacity-[0.12] blur-3xl" style={{ background: "#4d9fff" }} />
-      <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full opacity-[0.07] blur-3xl" style={{ background: "#00ff88" }} />
+      <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full opacity-[0.08] blur-3xl" style={{ background: "#2478e5" }} />
 
       {/* Floating map pins */}
       <FloatingPin style={{ top: "15%", left: "8%", opacity: 0.4 }} />
@@ -240,7 +240,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(0,255,136,0.3)] bg-[rgba(0,255,136,0.06)] mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#b8d5fb] bg-[#eef5ff] mb-6"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-[#00ff88] animate-pulse" />
               <span className="text-[#00ff88] text-xs font-medium">India&apos;s #1 Local SEO Growth Partner</span>
@@ -276,14 +276,14 @@ export default function Hero() {
             >
               <button
                 onClick={() => handleCTA("#final-cta")}
-                className="px-7 py-4 rounded-xl font-bold text-base text-[#060d1f] transition-all hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(0,255,136,0.35)] active:scale-[0.97]"
-                style={{ background: "#00ff88" }}
+                className="px-7 py-4 rounded-xl font-bold text-base text-white transition-all hover:scale-[1.03] hover:shadow-[0_12px_28px_rgba(36,120,229,0.28)] active:scale-[0.97]"
+                style={{ background: "#2478e5" }}
               >
                 Book Free GMB Audit →
               </button>
               <button
                 onClick={() => handleCTA("#pricing")}
-                className="px-7 py-4 rounded-xl border border-white/15 text-white font-semibold text-base hover:bg-white/5 hover:scale-[1.02] hover:border-white/30 active:scale-[0.97] transition-all"
+                className="px-7 py-4 rounded-xl border border-[#9fc5ff] bg-white text-[#123f80] font-semibold text-base hover:bg-[#eef5ff] hover:scale-[1.02] hover:border-[#2478e5] active:scale-[0.97] transition-all"
               >
                 View Pricing Plans
               </button>

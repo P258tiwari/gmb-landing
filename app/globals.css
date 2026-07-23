@@ -230,6 +230,55 @@ main > section:nth-of-type(even) {
 [style*="color: #4d9fff"],
 [style*="color: rgb(77, 159, 255)"] { color: #1b63c3 !important; }
 
+/* Brand migration: legacy green animation and completion states now follow
+   the GetRealFlow navy/blue system, including arbitrary Tailwind utilities. */
+[class*="bg-[rgba(0,255,136"],
+[class*="hover:bg-[rgba(0,255,136"]:hover {
+  background-color: rgba(36, 120, 229, 0.09) !important;
+}
+
+[class*="border-[rgba(0,255,136"],
+[class*="focus:border-[rgba(0,255,136"]:focus,
+[class*="focus-within:border-[rgba(0,255,136"]:focus-within {
+  border-color: rgba(36, 120, 229, 0.38) !important;
+}
+
+[class*="shadow-[0_0"][class*="rgba(0,255,136"] {
+  box-shadow: 0 12px 30px rgba(36, 120, 229, 0.2) !important;
+}
+
+[style*="radial-gradient"][style*="0,255,136"] {
+  background: radial-gradient(ellipse at 50% 50%, rgba(36, 120, 229, 0.1), transparent 65%) !important;
+}
+
+[style*="linear-gradient"][style*="#00ff88"] {
+  background: linear-gradient(90deg, #2478e5, #60a5fa) !important;
+}
+
+[style*="box-shadow"][style*="0,255,136"] {
+  box-shadow: 0 12px 30px rgba(36, 120, 229, 0.22) !important;
+}
+
+[style*="background: rgba(0, 255, 136"],
+[style*="background:rgba(0,255,136"],
+[style*="background-color: rgba(0, 255, 136"],
+[style*="background-color:rgba(0,255,136"] {
+  background: rgba(36, 120, 229, 0.09) !important;
+}
+
+[style*="border"][style*="0,255,136"] {
+  border-color: rgba(36, 120, 229, 0.32) !important;
+}
+
+#industries .glass-card:hover,
+#case-studies .glass-card:hover {
+  border-color: #9fc5ff !important;
+}
+
+#case-studies .glass-card {
+  box-shadow: 0 8px 24px rgba(7, 17, 40, 0.08);
+}
+
 /* Ensure white cards and panels always inherit readable dark copy. */
 .glass-card,
 .maps-card,

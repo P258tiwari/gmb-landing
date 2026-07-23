@@ -87,9 +87,9 @@ function CustomSelect({
             maxHeight: 240,
             overflowY: "auto",
             zIndex: 99999,
-            background: "#0a1628",
-            border: "1px solid rgba(255,255,255,0.1)",
-            boxShadow: "0 16px 40px rgba(0,0,0,0.7)",
+            background: "#ffffff",
+            border: "1px solid #cbdaf0",
+            boxShadow: "0 16px 40px rgba(7,17,40,0.16)",
           }}
         >
           {options.map((opt) => {
@@ -101,8 +101,8 @@ function CustomSelect({
                   onClick={() => { onChange(opt); setOpen(false); }}
                   className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-left transition-colors duration-150"
                   style={{
-                    color: selected ? "#00ff88" : "#ccd6f0",
-                    background: selected ? "rgba(0,255,136,0.07)" : "transparent",
+                    color: selected ? "#2478e5" : "#3c4043",
+                    background: selected ? "rgba(36,120,229,0.08)" : "transparent",
                   }}
                   onMouseEnter={(e) => { if (!selected) (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)"; }}
                   onMouseLeave={(e) => { if (!selected) (e.currentTarget as HTMLElement).style.background = "transparent"; }}
@@ -128,8 +128,8 @@ function CustomSelect({
         className="w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl text-sm transition-all duration-200 text-left cursor-pointer"
         style={{
           background: open ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.04)",
-          border: open ? "1px solid rgba(0,255,136,0.4)" : "1px solid rgba(255,255,255,0.10)",
-          color: value ? "#fff" : "#4a5a7a",
+          border: open ? "1px solid rgba(36,120,229,0.55)" : "1px solid #dadce0",
+          color: value ? "#202124" : "#70757a",
         }}
       >
         <span>{value || placeholder}</span>
@@ -231,7 +231,7 @@ export default function FinalCTA() {
   return (
     <section id="final-cta" ref={ref} className="py-24 lg:py-32 bg-[#030810] relative overflow-hidden">
       <div className="absolute inset-0" style={{
-        background: "radial-gradient(ellipse at 50% 50%, rgba(0,255,136,0.07) 0%, transparent 65%)"
+        background: "radial-gradient(ellipse at 50% 45%, rgba(36,120,229,0.11) 0%, transparent 65%)"
       }} />
 
       <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
@@ -240,7 +240,7 @@ export default function FinalCTA() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(0,255,136,0.3)] bg-[rgba(0,255,136,0.06)] mb-4"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#b8d5fb] bg-[#eef5ff] mb-4"
           >
             <div className="w-1.5 h-1.5 rounded-full bg-[#00ff88] animate-pulse" />
             <span className="text-[#00ff88] text-xs font-medium">Free Audit — No Credit Card Required</span>
@@ -376,7 +376,7 @@ export default function FinalCTA() {
                 <motion.button
                   type="submit"
                   disabled={submitting}
-                  whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(0,255,136,0.3)" }}
+                  whileHover={{ scale: 1.02, boxShadow: "0 12px 30px rgba(36,120,229,0.28)" }}
                   whileTap={{ scale: 0.97 }}
                   className="flex-1 py-4 rounded-xl bg-[#00ff88] text-[#060d1f] font-bold text-base flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70"
                 >

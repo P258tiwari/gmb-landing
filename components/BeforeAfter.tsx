@@ -11,7 +11,7 @@ type PlacePanelProps = { optimized?: boolean; inView: boolean };
 
 function PlacePanel({ optimized = false, inView }: PlacePanelProps) {
   const items = optimized ? afterItems : beforeItems;
-  const accent = optimized ? "#34a853" : "#d93025";
+  const accent = optimized ? "#2478e5" : "#d93025";
 
   return (
     <motion.article initial={{ opacity: 0, x: optimized ? 40 : -40 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: .7, delay: optimized ? .3 : .2 }} className="flex min-w-0 flex-1 flex-col overflow-hidden rounded-[22px] border border-[#dadce0] bg-white shadow-[0_18px_55px_rgba(0,0,0,.24)]">
@@ -38,7 +38,7 @@ function PlacePanel({ optimized = false, inView }: PlacePanelProps) {
           </div>
         </div>
 
-        <div className="mt-4 space-y-2.5">{items.map((item, index) => <motion.div key={item} initial={{ opacity: 0, x: optimized ? 10 : -10 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: .48 + index * .07 }} className="flex items-center gap-3"><span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full" style={{ background: optimized ? "#e6f4ea" : "#fce8e6" }}>{optimized ? <Check className="h-3 w-3 text-[#137333]" /> : <X className="h-3 w-3 text-[#c5221f]" />}</span><span className="text-[12px] text-[#3c4043]">{item}</span></motion.div>)}</div>
+        <div className="mt-4 space-y-2.5">{items.map((item, index) => <motion.div key={item} initial={{ opacity: 0, x: optimized ? 10 : -10 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: .48 + index * .07 }} className="flex items-center gap-3"><span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full" style={{ background: optimized ? "#eaf2ff" : "#fce8e6" }}>{optimized ? <Check className="h-3 w-3 text-[#2478e5]" /> : <X className="h-3 w-3 text-[#c5221f]" />}</span><span className="text-[12px] text-[#3c4043]">{item}</span></motion.div>)}</div>
       </div>
 
       <div className="mx-4 mb-4 flex items-center justify-between rounded-full px-4 py-2.5 text-[10px] font-semibold" style={{ color: accent, background: optimized ? "#e6f4ea" : "#fce8e6" }}><span>{optimized ? "10x calls increase · Rank #2" : "2 calls / month · Rank #14"}</span><ChevronRight className="h-3.5 w-3.5" /></div>

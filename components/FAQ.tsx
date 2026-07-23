@@ -50,7 +50,7 @@ export default function FAQ() {
               <div className="flex items-start gap-3">
                 <div
                   className="flex-shrink-0 w-1 h-full rounded-full mt-1"
-                  style={{ background: "#00ff88", minHeight: "14px", width: "3px" }}
+                  style={{ background: "#2478e5", minHeight: "14px", width: "3px" }}
                 />
                 <p className="text-white font-semibold text-sm leading-snug">{faq.question}</p>
               </div>

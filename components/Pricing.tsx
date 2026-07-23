@@ -63,8 +63,8 @@ export default function Pricing() {
                 onClick={() => setBilling(b)}
                 className="px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200"
                 style={{
-                  background: billing === b ? "#00ff88" : "transparent",
-                  color: billing === b ? "#060d1f" : "#8899bb",
+                  background: billing === b ? "#2478e5" : "transparent",
+                  color: billing === b ? "#ffffff" : "#5f6368",
                 }}
               >
                 {b === "yearly" ? (
@@ -119,7 +119,7 @@ export default function Pricing() {
               {/* Top accent line for popular */}
               {plan.popular && (
                 <div className="absolute top-0 left-0 right-0 h-0.5" style={{
-                  background: "linear-gradient(90deg, transparent, #00ff88, transparent)"
+                  background: "linear-gradient(90deg, transparent, #2478e5, transparent)"
                 }} />
               )}
 
@@ -137,8 +137,8 @@ export default function Pricing() {
                     <div
                       className="flex-shrink-0 flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold"
                       style={{
-                        background: plan.popular ? "#00ff88" : "rgba(77,159,255,0.15)",
-                        color: plan.popular ? "#060d1f" : "#4d9fff",
+                        background: plan.popular ? "#2478e5" : "rgba(77,159,255,0.15)",
+                        color: plan.popular ? "#ffffff" : "#1b63c3",
                       }}
                     >
                       {plan.popular && <Star className="w-2.5 h-2.5 fill-current" />}
@@ -179,8 +179,8 @@ export default function Pricing() {
                 <div
                   className="mt-4 flex items-center gap-2 px-3 py-2 rounded-lg"
                   style={{
-                    background: "rgba(0,255,136,0.07)",
-                    border: "1px solid rgba(0,255,136,0.18)",
+                    background: "rgba(36,120,229,0.08)",
+                    border: "1px solid rgba(36,120,229,0.2)",
                   }}
                 >
                   <Zap className="w-3.5 h-3.5 text-[#00ff88] flex-shrink-0" />
@@ -222,11 +222,11 @@ export default function Pricing() {
                     <li key={fi} className="flex items-start gap-2.5">
                       <Check
                         className="w-4 h-4 flex-shrink-0 mt-0.5"
-                        style={{ color: feature.highlight ? "#00ff88" : "#4d9fff" }}
+                        style={{ color: feature.highlight ? "#2478e5" : "#4d9fff" }}
                       />
                       <span
                         className="text-sm leading-relaxed"
-                        style={{ color: feature.highlight ? "#00ff88" : "#8899bb", fontWeight: feature.highlight ? 600 : 400 }}
+                        style={{ color: feature.highlight ? "#1b63c3" : "#5f6368", fontWeight: feature.highlight ? 600 : 400 }}
                       >
                         {feature.text}
                       </span>
@@ -242,8 +242,8 @@ export default function Pricing() {
                   className="w-full py-3.5 rounded-xl font-semibold text-sm transition-all hover:scale-[1.02] active:scale-[0.97]"
                   style={
                     plan.popular
-                      ? { background: "#00ff88", color: "#060d1f" }
-                      : { border: "1px solid rgba(255,255,255,0.14)", color: "#fff", background: "transparent" }
+                      ? { background: "#2478e5", color: "#ffffff", boxShadow: "0 10px 24px rgba(36,120,229,0.2)" }
+                      : { border: "1px solid #9fc5ff", color: "#123f80", background: "#ffffff" }
                   }
                 >
                   {plan.cta} →

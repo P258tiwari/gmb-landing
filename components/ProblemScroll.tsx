@@ -14,12 +14,12 @@ const problems = [
   {
     text: "Low Ranking.",
     sub: "You're buried below rank #10 while competitors own the Top 3.",
-    color: "#ff8800",
+    color: "#1b63c3",
   },
   {
     text: "Incomplete Profile.",
     sub: "Google ignores incomplete profiles. You're sending the wrong signals.",
-    color: "#ffcc00",
+    color: "#2478e5",
   },
   {
     text: "Competitors Winning.",

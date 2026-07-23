@@ -26,7 +26,7 @@ export default function GoogleMapsCard() {
   const isTop = rank <= 3;
 
   return (
-    <motion.div initial={{ scale: .9, opacity: 0, y: 20 }} animate={{ scale: 1, opacity: 1, y: 0 }} transition={{ duration: .9, delay: .3, ease: [0.22, 1, 0.36, 1] }} className="relative overflow-hidden rounded-[22px] border border-[#dfe3e7] bg-white shadow-[0_30px_80px_rgba(0,0,0,.42)]">
+    <motion.div initial={{ scale: .9, opacity: 0, y: 20 }} animate={{ scale: 1, opacity: 1, y: 0 }} transition={{ duration: .9, delay: .3, ease: [0.22, 1, 0.36, 1] }} className="relative overflow-hidden rounded-[22px] border border-[#cbdaf0] bg-white shadow-[0_24px_60px_rgba(7,17,40,.18)]">
       <div className="border-b border-[#e5e7eb] px-4 pb-3 pt-4">
         <div className="flex items-center gap-2 rounded-full border border-[#dadce0] bg-white px-4 py-3 shadow-sm">
           <span className="flex-1 truncate text-[13px] text-[#3c4043]">best dentist near me</span>
@@ -51,15 +51,15 @@ export default function GoogleMapsCard() {
             ))}
           </div>
           <div className="mt-4 flex items-center justify-center rounded-full bg-[#f1f3f4] py-2 text-[10px] text-[#3c4043]">More places <ChevronRight className="ml-2 h-3 w-3" /></div>
-          <motion.div className="mt-3 flex items-center gap-2 rounded-xl border px-3 py-2" animate={{ borderColor: isTop ? "#34a853" : "#dfe3e7", backgroundColor: isTop ? "#e6f4ea" : "#ffffff" }}><div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#34a853] text-xs font-bold text-white">{isTop ? "★" : rank}</div><div><div className="text-[10px] font-bold text-[#137333]">Your Business</div><div className="text-[9px] text-[#5f6368]">{isTop ? "Now visible in the top 3" : "Moving up in Maps results"}</div></div></motion.div>
+          <motion.div className="mt-3 flex items-center gap-2 rounded-xl border px-3 py-2" animate={{ borderColor: isTop ? "#7fb2f5" : "#dfe3e7", backgroundColor: isTop ? "#eaf2ff" : "#ffffff" }}><div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#2478e5] text-xs font-bold" style={{ color: "#ffffff" }}>{isTop ? "★" : rank}</div><div><div className="text-[10px] font-bold text-[#123f80]">Your Business</div><div className="text-[9px] text-[#5f6368]">{isTop ? "Now visible in the top 3" : "Moving up in Maps results"}</div></div></motion.div>
         </div>
 
         <div className="relative overflow-hidden bg-[#e8f0e8]" style={{ backgroundImage: "linear-gradient(30deg, transparent 47%, #fff 48%, #fff 52%, transparent 53%), linear-gradient(150deg, transparent 44%, #fff 45%, #fff 49%, transparent 50%), linear-gradient(90deg, rgba(174,203,223,.45) 1px, transparent 1px), linear-gradient(rgba(174,203,223,.45) 1px, transparent 1px)", backgroundSize: "145px 120px, 180px 150px, 42px 42px, 42px 42px" }}>
           <div className="absolute left-[8%] top-[12%] h-8 w-28 rotate-12 rounded-full bg-[#b7e1cd]" /><div className="absolute right-[-20%] top-[4%] h-12 w-48 -rotate-12 bg-[#a8dff0]" />
           <div className="absolute left-[20%] top-[56%] -rotate-45 text-[10px] text-[#5f6368]">Mall Road</div><div className="absolute bottom-[24%] right-[10%] rotate-45 text-[10px] text-[#5f6368]">Canal Road</div><div className="absolute left-[28%] top-[45%] text-[15px] font-bold text-[#3c4043]">KANPUR</div>
-          {[[24,28],[68,20],[38,64],[76,58],[57,78],[18,82]].map(([left, top], index) => <MapPin key={index} className="absolute h-5 w-5 fill-[#ea4335] text-white drop-shadow" style={{ left: `${left}%`, top: `${top}%` }} />)}
-          <motion.div className="absolute" animate={{ left: isTop ? "55%" : "82%", top: isTop ? "34%" : "82%" }} transition={{ duration: 1.5, ease: "easeInOut" }}><div className="relative"><MapPin className="h-8 w-8 fill-[#4285f4] text-white drop-shadow-lg" />{isTop && <span className="absolute inset-0 rounded-full bg-[#4285f4]/30 animate-ping" />}</div></motion.div>
-          <div className="absolute right-3 top-3 rounded-full bg-[#3c4043] px-3 py-2 text-[9px] font-medium text-white">Open in Maps</div>
+          {[[24,28],[68,20],[38,64],[76,58],[57,78],[18,82]].map(([left, top], index) => <MapPin key={index} className="absolute h-5 w-5 fill-[#ea4335] drop-shadow" style={{ left: `${left}%`, top: `${top}%`, color: "#ffffff" }} />)}
+          <motion.div className="absolute" animate={{ left: isTop ? "55%" : "82%", top: isTop ? "34%" : "82%" }} transition={{ duration: 1.5, ease: "easeInOut" }}><div className="relative"><MapPin className="h-8 w-8 fill-[#2478e5] drop-shadow-lg" style={{ color: "#ffffff" }} />{isTop && <span className="absolute inset-0 rounded-full bg-[#4285f4]/30 animate-ping" />}</div></motion.div>
+          <div className="absolute right-3 top-3 rounded-full border border-white/70 bg-[#2478e5] px-3 py-2 text-[9px] font-semibold shadow-md" style={{ color: "#ffffff" }}>Open in Maps</div>
           <div className="absolute bottom-3 right-3 flex flex-col gap-2"><button aria-label="Find my location" className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#5f6368] shadow"><Crosshair className="h-4 w-4" /></button><div className="overflow-hidden rounded-lg bg-white text-center text-[#5f6368] shadow"><div className="border-b px-2 py-1 text-base">+</div><div className="px-2 py-1 text-base">−</div></div></div>
           <div className="absolute bottom-2 left-3 rounded bg-white/80 px-1 text-[8px] text-[#5f6368]">Map data ©2026</div>
         </div>

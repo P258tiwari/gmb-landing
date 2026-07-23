@@ -41,7 +41,7 @@ export default function CaseStudies() {
   return (
     <section id="case-studies" ref={ref} className="py-24 lg:py-32 bg-[#030810] relative overflow-hidden">
       <div className="absolute inset-0" style={{
-        background: "radial-gradient(ellipse at 50% 50%, rgba(0,255,136,0.04) 0%, transparent 70%)"
+        background: "radial-gradient(ellipse at 50% 50%, rgba(36,120,229,0.07) 0%, transparent 70%)"
       }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -50,7 +50,7 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(0,255,136,0.3)] bg-[rgba(0,255,136,0.06)] mb-4"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#b8d5fb] bg-[#eef5ff] mb-4"
           >
             <Star className="w-3 h-3 text-[#00ff88]" />
             <span className="text-[#00ff88] text-xs font-medium">Client Results</span>
@@ -74,7 +74,7 @@ export default function CaseStudies() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-              className="glass-card rounded-2xl overflow-hidden border border-white/8 flex flex-col"
+              className="glass-card rounded-2xl overflow-hidden border border-[#d9e2ef] flex flex-col shadow-[0_8px_24px_rgba(7,17,40,.08)]"
             >
               {/* Header */}
               <div className="p-5 border-b border-white/5">

@@ -70,14 +70,14 @@ export default function USPBucket() {
             className={`relative rounded-2xl overflow-hidden transition-all duration-[700ms] delay-200 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             style={{
               background: "linear-gradient(135deg, #ffffff 0%, #f8fafd 100%)",
-              border: allDone ? "1px solid #81c995" : "1px solid #d2e3fc",
-              boxShadow: allDone ? "0 8px 28px rgba(52,168,83,0.12)" : "0 3px 14px rgba(60,64,67,0.10)",
+              border: allDone ? "1px solid #7fb2f5" : "1px solid #d2e3fc",
+              boxShadow: allDone ? "0 12px 34px rgba(36,120,229,0.14)" : "0 3px 14px rgba(60,64,67,0.10)",
               transition: "all 0.5s ease",
             }}
           >
             <div className="px-5 pt-4 pb-1 border-b border-white/5 flex items-center justify-between">
               <span className="text-[#8899bb] text-xs">Optimization Package</span>
-              <span className="text-xs font-mono" style={{ color: allDone ? "#00ff88" : "#4d9fff" }}>
+              <span className="text-xs font-mono" style={{ color: allDone ? "#2478e5" : "#4d9fff" }}>
                 {visibleChips.length}/{uspChips.length} active
               </span>
             </div>
@@ -91,9 +91,9 @@ export default function USPBucket() {
                       visibleChips.includes(i) ? "scale-100 opacity-100" : "scale-50 opacity-0"
                     }`}
                     style={{
-                      background: allDone ? "rgba(0,255,136,0.1)" : "rgba(77,159,255,0.08)",
-                      border: allDone ? "1px solid rgba(0,255,136,0.25)" : "1px solid rgba(77,159,255,0.2)",
-                      color: allDone ? "#00ff88" : "#4d9fff",
+                      background: allDone ? "rgba(36,120,229,0.1)" : "rgba(77,159,255,0.08)",
+                      border: allDone ? "1px solid rgba(36,120,229,0.25)" : "1px solid rgba(77,159,255,0.2)",
+                      color: allDone ? "#1b63c3" : "#4d9fff",
                       transitionTimingFunction: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
                     }}
                   >

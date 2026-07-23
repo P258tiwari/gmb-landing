@@ -41,7 +41,7 @@ export default function Industries() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(0,255,136,0.3)] bg-[rgba(0,255,136,0.06)] mb-4"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#b8d5fb] bg-[#eef5ff] mb-4"
           >
             <span className="text-[#00ff88] text-xs font-medium">Industries We Serve</span>
           </motion.div>
@@ -67,14 +67,14 @@ export default function Industries() {
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.06 }}
                 whileHover={{
                   y: -4,
-                  borderColor: "rgba(0,255,136,0.3)",
+                  borderColor: "rgba(36,120,229,0.35)",
                   transition: { duration: 0.2 },
                 }}
                 className="glass-card rounded-xl p-5 border border-white/6 cursor-default group"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center mb-3 group-hover:bg-[rgba(0,255,136,0.1)] transition-colors duration-200">
+                <div className="w-10 h-10 rounded-lg bg-[#eef5ff] flex items-center justify-center mb-3 group-hover:bg-[#dbeafe] transition-colors duration-200">
                   {Icon && (
-                    <Icon className="w-5 h-5 text-[#4d9fff] group-hover:text-[#00ff88] transition-colors duration-200" />
+                    <Icon className="w-5 h-5 text-[#2478e5] group-hover:text-[#071128] transition-colors duration-200" />
                   )}
                 </div>
                 <h3 className="text-white font-semibold text-sm mb-1">{industry.name}</h3>
