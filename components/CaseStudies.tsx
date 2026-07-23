@@ -86,12 +86,12 @@ export default function CaseStudies() {
                     </p>
                     {/* Tooltip */}
                     <div
-                      className="absolute left-0 top-full mt-2 z-50 px-3 py-2 rounded-xl text-xs text-white leading-snug
+                      className="absolute left-0 top-full mt-2 z-50 px-3 py-2 rounded-xl text-xs text-[#202124] font-medium leading-snug
                                  opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 w-64"
                       style={{
-                        background: "#0a1628",
-                        border: "1px solid rgba(77,159,255,0.25)",
-                        boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+                        background: "#ffffff",
+                        border: "1px solid #9fc5ff",
+                        boxShadow: "0 12px 30px rgba(7,17,40,0.18)",
                       }}
                     >
                       {c.name}

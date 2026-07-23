@@ -276,8 +276,8 @@ export default function Hero() {
             >
               <button
                 onClick={() => handleCTA("#final-cta")}
-                className="px-7 py-4 rounded-xl font-bold text-base text-white transition-all hover:scale-[1.03] hover:shadow-[0_12px_28px_rgba(36,120,229,0.28)] active:scale-[0.97]"
-                style={{ background: "#2478e5" }}
+                className="px-7 py-4 rounded-xl font-bold text-base transition-all hover:scale-[1.03] hover:shadow-[0_12px_28px_rgba(36,120,229,0.28)] active:scale-[0.97]"
+                style={{ background: "#2478e5", color: "#ffffff" }}
               >
                 Book Free GMB Audit →
               </button>

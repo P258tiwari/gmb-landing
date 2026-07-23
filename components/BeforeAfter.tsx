@@ -33,7 +33,14 @@ function PlacePanel({ optimized = false, inView }: PlacePanelProps) {
           </div>
 
           <div className="flex gap-3 bg-white p-3">
-            <div className="h-16 w-16 shrink-0 rounded-lg bg-gradient-to-br from-[#d9c9b5] via-[#f7f2eb] to-[#b7d7d4]"><div className="m-auto mt-4 h-8 w-10 rounded bg-white/70 shadow-sm" /></div>
+            <div
+              className="h-16 w-16 shrink-0 rounded-lg border border-[#e1e8f0] bg-cover shadow-sm"
+              style={{
+                backgroundImage: "url('/business-locations-grid.png')",
+                backgroundSize: "200% 200%",
+                backgroundPosition: optimized ? "100% 100%" : "0% 0%",
+              }}
+            />
             <div className="min-w-0 flex-1"><div className="flex items-start justify-between gap-2"><span className="truncate text-[12px] font-semibold">Your Business</span><span className="rounded-full px-2 py-1 text-[8px] font-bold" style={{ color: accent, background: optimized ? "#e6f4ea" : "#fce8e6" }}>{optimized ? "TOP 3" : "RANK #14"}</span></div><div className="mt-1 flex items-center text-[9px] text-[#5f6368]"><span>{optimized ? "4.8" : "3.2"}</span><span className="mx-1 flex">{[0,1,2,3,4].map((star) => <Star key={star} className={`h-2.5 w-2.5 ${optimized || star < 2 ? "fill-[#fbbc04] text-[#fbbc04]" : "text-[#dadce0]"}`} />)}</span><span>({optimized ? "127" : "8"}) · Business</span></div><div className="mt-1 text-[9px] text-[#70757a]">Open · On-site services</div><button className="mt-1.5 rounded-full border border-[#dadce0] px-3 py-1 text-[8px] font-semibold text-[#1a73e8]">{optimized ? "Call now" : "View details"}</button></div>
           </div>
         </div>

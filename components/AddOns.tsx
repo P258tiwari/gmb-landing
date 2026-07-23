@@ -327,24 +327,24 @@ We run Google Maps ads to put your business at the very top of Maps results — 
                     style={{
                       background: platform === p.id
                         ? "rgba(36,120,229,0.09)"
-                        : "rgba(255,255,255,0.03)",
+                        : "#ffffff",
                       border: `1px solid ${platform === p.id
                         ? "rgba(36,120,229,0.35)"
-                        : "rgba(255,255,255,0.07)"}`,
+                        : "#dadce0"}`,
                     }}
                   >
                     <div className="flex items-center gap-1.5 mb-1">
                       <span
                         className="text-sm font-bold"
-                        style={{ color: platform === p.id ? p.badgeColor : "#fff" }}
+                        style={{ color: platform === p.id ? p.badgeColor : "#071128" }}
                       >
                         {p.label}
                       </span>
                     </div>
-                    <div className="text-[11px] text-[#8899bb] whitespace-nowrap overflow-hidden text-ellipsis">{p.description}</div>
+                    <div className="text-[11px] text-[#5f6368] whitespace-nowrap overflow-hidden text-ellipsis">{p.description}</div>
                     <div
                       className="mt-1.5 text-xs font-bold"
-                      style={{ color: platform === p.id ? p.badgeColor : "#445566" }}
+                      style={{ color: platform === p.id ? p.badgeColor : "#3c4043" }}
                     >
                       {formatINR(p.setupFee)} setup
                     </div>

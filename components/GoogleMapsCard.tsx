@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { ChevronRight, Crosshair, MapPin, Mic, MoreVertical, Search, Star, X } from "lucide-react";
 
 const places = [
-  { name: "Kanpur Dental World", rating: "4.9", reviews: "1.2K", category: "Dentist", address: "124/10 · On-site services", tone: "#d9c9b5" },
-  { name: "Dr. Vij Dental Clinic", rating: "4.9", reviews: "1.4K", category: "Dentist", address: "Lal Quarter, main road", tone: "#b7d7d4" },
-  { name: "VarRdan Dental Clinic", rating: "5.0", reviews: "184", category: "Dental clinic", address: "Raja Tower Complex", tone: "#e3d5a8" },
+  { name: "Kanpur Dental World", rating: "4.9", reviews: "1.2K", category: "Dentist", address: "124/10 · On-site services", tone: "#d9c9b5", imagePosition: "0% 0%" },
+  { name: "Dr. Vij Dental Clinic", rating: "4.9", reviews: "1.4K", category: "Dentist", address: "Lal Quarter, main road", tone: "#b7d7d4", imagePosition: "100% 0%" },
+  { name: "VarRdan Dental Clinic", rating: "5.0", reviews: "184", category: "Dental clinic", address: "Raja Tower Complex", tone: "#e3d5a8", imagePosition: "0% 100%" },
 ];
 
 export default function GoogleMapsCard() {
@@ -45,7 +45,14 @@ export default function GoogleMapsCard() {
           <div className="mt-3 space-y-3">
             {places.map((place, index) => (
               <motion.div key={place.name} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: .7 + index * .1 }} className="flex gap-3">
-                <div className="h-[58px] w-[58px] shrink-0 rounded-lg" style={{ background: `linear-gradient(145deg, ${place.tone}, #f8f4ed 45%, ${place.tone})` }}><div className="m-auto mt-4 h-7 w-9 rounded bg-white/70 shadow-sm" /></div>
+                <div
+                  className="h-[58px] w-[58px] shrink-0 rounded-lg border border-[#e1e8f0] bg-cover shadow-sm"
+                  style={{
+                    backgroundImage: "url('/business-locations-grid.png')",
+                    backgroundSize: "200% 200%",
+                    backgroundPosition: place.imagePosition,
+                  }}
+                />
                 <div className="min-w-0 pt-0.5"><div className="truncate text-[11px] font-semibold">{place.name}</div><div className="mt-0.5 flex items-center text-[9px] text-[#5f6368]"><span>{place.rating}</span><span className="mx-1 flex">{[0,1,2,3,4].map((star) => <Star key={star} className="h-2.5 w-2.5 fill-[#fbbc04] text-[#fbbc04]" />)}</span><span>({place.reviews}) · {place.category}</span></div><div className="mt-1 truncate text-[9px] text-[#70757a]">{place.address}</div><div className="text-[9px] text-[#70757a]">On-site services</div></div>
               </motion.div>
             ))}

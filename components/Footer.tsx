@@ -80,7 +80,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-6 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8899bb]/60">
-          <p>© {new Date().getFullYear()} Get Real Flow by Ampwake Group. All rights reserved.</p>
+          <p className="text-black">
+            © {new Date().getFullYear()} <span className="font-semibold">Get Real Flow</span> by{" "}
+            <span className="font-semibold">Ampwake Group</span>. All rights reserved.
+          </p>
           <div className="flex gap-5">
             <Link href="/privacy-policy" className="hover:text-[#8899bb] transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-[#8899bb] transition-colors">Terms of Service</Link>

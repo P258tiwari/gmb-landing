@@ -42,7 +42,7 @@ export default function ProblemScroll() {
           trigger: sectionRef.current,
           start: "top top",
           end: "+=280%",
-          scrub: 1.2,
+          scrub: 1.8,
           pin: stickyRef.current,
           pinSpacing: true,
           anticipatePin: 1,
@@ -57,15 +57,15 @@ export default function ProblemScroll() {
         const exitAt = (i + 1) * step;
         tl.fromTo(
           el,
-          { opacity: 0, y: 40, filter: "blur(6px)" },
-          { opacity: 1, y: 0, filter: "blur(0px)", duration: step * 0.4, ease: "power2.out" },
+          { opacity: 0, y: 24, filter: "blur(4px)" },
+          { opacity: 1, y: 0, filter: "blur(0px)", duration: step * 0.55, ease: "power2.out" },
           enterAt,
         );
         if (i < problems.length - 1) {
           tl.to(
             el,
-            { opacity: 0, y: -30, filter: "blur(4px)", duration: step * 0.3, ease: "power2.in" },
-            exitAt - step * 0.3,
+            { opacity: 0, y: -20, filter: "blur(3px)", duration: step * 0.4, ease: "power2.inOut" },
+            exitAt - step * 0.4,
           );
         }
       });
@@ -99,19 +99,20 @@ export default function ProblemScroll() {
             backgroundColor: "#edf4f2",
             backgroundImage:
               "linear-gradient(90deg, rgba(151,185,210,.22) 1px, transparent 1px), linear-gradient(rgba(151,185,210,.22) 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
+            backgroundSize: "42px 42px",
           }}
         />
-        <div className="absolute -left-[8%] top-[14%] h-16 w-[58%] -rotate-[8deg] rounded-full bg-white/90 shadow-[0_0_0_1px_rgba(203,218,232,.45)]" />
-        <div className="absolute -right-[10%] top-[62%] h-14 w-[64%] rotate-[11deg] rounded-full bg-white/90 shadow-[0_0_0_1px_rgba(203,218,232,.45)]" />
-        <div className="absolute left-[28%] -top-[12%] h-[130%] w-12 rotate-[18deg] rounded-full bg-white/75" />
-        <div className="absolute left-[5%] bottom-[12%] h-20 w-64 rounded-[45%] bg-[#dcefdc]/75" />
-        <div className="absolute right-[4%] top-[10%] h-28 w-72 rounded-[48%] bg-[#d9edf7]/70" />
+        <div className="absolute -left-[6%] top-[20%] h-8 w-[42%] -rotate-[8deg] rounded-full bg-white/80 shadow-[0_0_0_1px_rgba(203,218,232,.32)]" />
+        <div className="absolute -right-[5%] top-[66%] h-7 w-[46%] rotate-[11deg] rounded-full bg-white/80 shadow-[0_0_0_1px_rgba(203,218,232,.32)]" />
+        <div className="absolute left-[31%] -top-[10%] h-[120%] w-6 rotate-[18deg] rounded-full bg-white/65" />
+        <div className="absolute left-[7%] bottom-[14%] h-12 w-44 rounded-[45%] bg-[#dcefdc]/55" />
+        <div className="absolute right-[7%] top-[15%] h-16 w-44 rounded-[48%] bg-[#d9edf7]/52" />
         <div className="absolute left-[12%] top-[34%] text-[11px] font-medium tracking-wide text-[#7c8b91]/55">Mall Road</div>
         <div className="absolute right-[18%] bottom-[26%] rotate-[11deg] text-[11px] font-medium tracking-wide text-[#7c8b91]/55">Canal Road</div>
         <div className="absolute inset-0 pointer-events-none" style={{
           background: "radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.2) 0%, rgba(248,250,253,0.48) 72%, rgba(248,250,253,0.78) 100%)"
         }} />
+        <div className="absolute inset-x-0 top-0 h-28 pointer-events-none bg-gradient-to-b from-white via-white/75 to-transparent" />
 
         {/* Problem Label */}
         <div className="absolute top-8 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-red-500/20 bg-red-500/5">
