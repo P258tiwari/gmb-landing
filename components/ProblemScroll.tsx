@@ -14,7 +14,7 @@ const problems = [
   {
     text: "Low Ranking.",
     sub: "You're buried below rank #10 while competitors own the Top 3.",
-    color: "#1b63c3",
+    color: "#071128",
   },
   {
     text: "Incomplete Profile.",
@@ -92,13 +92,25 @@ export default function ProblemScroll() {
         className="md:sticky top-0 min-h-screen md:h-screen flex flex-col items-center justify-center overflow-hidden"
         style={{ background: "#f8fafd" }}
       >
-        {/* Background blurred map grid */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.035]" style={{
-          backgroundImage: "linear-gradient(#4d9fff 1px, transparent 1px), linear-gradient(90deg, #4d9fff 1px, transparent 1px)",
-          backgroundSize: "50px 50px",
-        }} />
+        {/* Subtle Google Maps-inspired background */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundColor: "#edf4f2",
+            backgroundImage:
+              "linear-gradient(90deg, rgba(151,185,210,.22) 1px, transparent 1px), linear-gradient(rgba(151,185,210,.22) 1px, transparent 1px)",
+            backgroundSize: "72px 72px",
+          }}
+        />
+        <div className="absolute -left-[8%] top-[14%] h-16 w-[58%] -rotate-[8deg] rounded-full bg-white/90 shadow-[0_0_0_1px_rgba(203,218,232,.45)]" />
+        <div className="absolute -right-[10%] top-[62%] h-14 w-[64%] rotate-[11deg] rounded-full bg-white/90 shadow-[0_0_0_1px_rgba(203,218,232,.45)]" />
+        <div className="absolute left-[28%] -top-[12%] h-[130%] w-12 rotate-[18deg] rounded-full bg-white/75" />
+        <div className="absolute left-[5%] bottom-[12%] h-20 w-64 rounded-[45%] bg-[#dcefdc]/75" />
+        <div className="absolute right-[4%] top-[10%] h-28 w-72 rounded-[48%] bg-[#d9edf7]/70" />
+        <div className="absolute left-[12%] top-[34%] text-[11px] font-medium tracking-wide text-[#7c8b91]/55">Mall Road</div>
+        <div className="absolute right-[18%] bottom-[26%] rotate-[11deg] text-[11px] font-medium tracking-wide text-[#7c8b91]/55">Canal Road</div>
         <div className="absolute inset-0 pointer-events-none" style={{
-          background: "radial-gradient(ellipse at 50% 50%, rgba(77,159,255,0.07) 0%, transparent 65%)"
+          background: "radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.2) 0%, rgba(248,250,253,0.48) 72%, rgba(248,250,253,0.78) 100%)"
         }} />
 
         {/* Problem Label */}

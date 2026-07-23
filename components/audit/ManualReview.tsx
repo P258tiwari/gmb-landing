@@ -19,7 +19,7 @@ export default function ManualReview({ report }: Props) {
         className="fixed inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 30%, rgba(0,255,136,0.06) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 50% 30%, rgba(36,120,229,0.11) 0%, transparent 60%)",
         }}
       />
 
@@ -40,12 +40,12 @@ export default function ManualReview({ report }: Props) {
             transition={{ type: "spring", stiffness: 150, damping: 12 }}
             className="w-20 h-20 rounded-full mx-auto mb-8 flex items-center justify-center"
             style={{
-              background: "rgba(0,255,136,0.1)",
-              border: "2px solid rgba(0,255,136,0.3)",
-              boxShadow: "0 0 40px rgba(0,255,136,0.15)",
+              background: "rgba(36,120,229,0.09)",
+              border: "2px solid rgba(36,120,229,0.32)",
+              boxShadow: "0 16px 42px rgba(36,120,229,0.18)",
             }}
           >
-            <CheckCircle2 className="w-9 h-9 text-[#00ff88]" />
+            <CheckCircle2 className="w-9 h-9 text-[#2478e5]" />
           </motion.div>
 
           <motion.div
@@ -70,12 +70,12 @@ export default function ManualReview({ report }: Props) {
             <div
               className="rounded-xl p-4 mb-8 text-left"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: "#f7faff",
+                border: "1px solid #cbdaf0",
               }}
             >
               <div className="flex items-center gap-2 text-sm text-[#8899bb] mb-3">
-                <Clock className="w-4 h-4 text-[#00ff88]" />
+                <Clock className="w-4 h-4 text-[#2478e5]" />
                 What happens next
               </div>
               <ul className="space-y-2.5 text-sm">
@@ -88,7 +88,7 @@ export default function ManualReview({ report }: Props) {
                   <li key={i} className="flex items-start gap-2 text-[#8899bb]">
                     <span
                       className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5"
-                      style={{ background: "rgba(0,255,136,0.1)", color: "#00ff88" }}
+                      style={{ background: "#eaf2ff", color: "#2478e5" }}
                     >
                       {i + 1}
                     </span>
@@ -102,15 +102,16 @@ export default function ManualReview({ report }: Props) {
               href={`https://wa.me/${WA_NUM}?text=Hi%20Get%20Real%20Flow%2C%20I%20submitted%20a%20GMB%20audit%20request${report.businessName ? `%20for%20${encodeURIComponent(report.businessName)}` : ""}.%20Can%20you%20expedite%20it%3F`}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(37,211,102,0.25)" }}
+              whileHover={{ scale: 1.03, boxShadow: "0 14px 32px rgba(37,211,102,0.28)" }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center justify-center gap-2 w-full py-4 rounded-xl font-bold text-white text-base"
+              className="flex items-center justify-center gap-2 w-full py-4 rounded-xl font-bold text-base"
               style={{
-                background: "rgba(37,211,102,0.12)",
-                border: "1px solid rgba(37,211,102,0.3)",
+                background: "#25d366",
+                border: "1px solid #1ebd59",
+                color: "#ffffff",
               }}
             >
-              <MessageCircle className="w-5 h-5 text-[#25d366]" />
+              <MessageCircle className="w-5 h-5" style={{ color: "#ffffff" }} />
               WhatsApp Us for Faster Audit
             </motion.a>
 

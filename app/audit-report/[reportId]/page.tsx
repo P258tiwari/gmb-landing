@@ -56,17 +56,25 @@ export default async function AuditReportPage({
   const waHref = `https://wa.me/${WA_NUM}?text=Hi%20Get%20Real%20Flow%2C%20I%27d%20like%20to%20connect%20and%20improve%20my%20GMB%20profile.`;
 
   return (
-    <div className="bg-[#060d1f]" style={{ overflowX: "hidden", overflowWrap: "break-word" }}>
+    <div className="audit-report-surface min-h-screen bg-[#f7faff]" style={{ overflowX: "hidden", overflowWrap: "break-word" }}>
       <ScrollReset />
 
-      {/* Ambient background glow */}
+      {/* Light Google Maps-inspired report canvas */}
       <div
         className="fixed inset-0 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse at 50% 0%, rgba(0,255,136,0.05) 0%, transparent 50%)",
+          backgroundColor: "#edf4f2",
+          backgroundImage:
+            "linear-gradient(90deg, rgba(151,185,210,.2) 1px, transparent 1px), linear-gradient(rgba(151,185,210,.2) 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
         }}
       />
+      <div className="fixed -left-[12%] top-[18%] h-16 w-[65%] -rotate-[8deg] rounded-full bg-white/90 pointer-events-none" />
+      <div className="fixed -right-[12%] top-[58%] h-14 w-[68%] rotate-[10deg] rounded-full bg-white/90 pointer-events-none" />
+      <div className="fixed left-[18%] -top-[12%] h-[130%] w-12 rotate-[17deg] rounded-full bg-white/70 pointer-events-none" />
+      <div className="fixed right-[4%] top-[14%] h-32 w-80 rounded-[48%] bg-[#d9edf7]/65 pointer-events-none" />
+      <div className="fixed left-[3%] bottom-[12%] h-24 w-72 rounded-[48%] bg-[#e3ebf5]/70 pointer-events-none" />
+      <div className="fixed inset-0 pointer-events-none bg-white/70" />
 
       <ReportHero report={report} />
 
@@ -163,8 +171,8 @@ export default async function AuditReportPage({
           <div
             className="mb-8 rounded-2xl p-6"
             style={{
-              background: "rgba(0,255,136,0.04)",
-              border: "1px solid rgba(0,255,136,0.15)",
+              background: "#eef5ff",
+              border: "1px solid #b8d5fb",
             }}
           >
             <p className="text-[#00ff88] text-xs font-medium uppercase tracking-widest mb-2">
@@ -215,7 +223,7 @@ export default async function AuditReportPage({
                     <li key={i} className="flex items-start gap-2 text-sm">
                       <span
                         className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold"
-                        style={{ background: "rgba(0,255,136,0.1)", color: "#00ff88" }}
+                        style={{ background: "#eaf2ff", color: "#2478e5" }}
                       >
                         ↑
                       </span>
@@ -238,9 +246,9 @@ export default async function AuditReportPage({
               <span
                 className="px-3 py-1 rounded-full text-xs font-medium"
                 style={{
-                  background: "rgba(0,255,136,0.08)",
-                  color: "#00ff88",
-                  border: "1px solid rgba(0,255,136,0.2)",
+                  background: "#eaf2ff",
+                  color: "#2478e5",
+                  border: "1px solid #b8d5fb",
                 }}
               >
                 {report.basicFindings.filter((f) => f.status === "good").length} of{" "}
@@ -425,8 +433,8 @@ export default async function AuditReportPage({
           <div
             className="rounded-2xl p-8 text-center"
             style={{
-              background: "rgba(0,255,136,0.04)",
-              border: "1px solid rgba(0,255,136,0.15)",
+              background: "#eef5ff",
+              border: "1px solid #b8d5fb",
             }}
           >
             <h2 className="text-white font-bold text-xl mb-3">
@@ -442,9 +450,9 @@ export default async function AuditReportPage({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all hover:opacity-90"
               style={{
-                background: "rgba(0,255,136,0.12)",
-                border: "1px solid rgba(0,255,136,0.3)",
-                color: "#00ff88",
+                background: "#2478e5",
+                border: "1px solid #2478e5",
+                color: "#ffffff",
               }}
             >
               Connect with Get Real Flow

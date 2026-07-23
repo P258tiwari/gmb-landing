@@ -12,11 +12,11 @@ const WA_NUM =
 const STATUS_CONFIG = {
   good: {
     icon: CheckCircle2,
-    color: "#00ff88",
-    bg: "rgba(0,255,136,0.06)",
-    border: "rgba(0,255,136,0.15)",
+    color: "#2478e5",
+    bg: "#eef5ff",
+    border: "#b8d5fb",
     badge: "Good",
-    badgeBg: "rgba(0,255,136,0.1)",
+    badgeBg: "#dbeafe",
   },
   needs_work: {
     icon: AlertCircle,
@@ -153,13 +153,13 @@ export default function FindingCard({ finding, index, number }: Props) {
               {/* Frosted overlay with CTA */}
               <div
                 className="relative flex items-center justify-between gap-2 px-3 py-2.5"
-                style={{ backdropFilter: "blur(8px)", background: "rgba(6,13,31,0.6)" }}
+                style={{ backdropFilter: "blur(8px)", background: "rgba(247,250,255,0.9)" }}
               >
                 <div className="flex items-center gap-1.5">
-                  <Lock className="w-3 h-3 flex-shrink-0" style={{ color: "#00ff88" }} />
+                  <Lock className="w-3 h-3 flex-shrink-0" style={{ color: "#2478e5" }} />
                   <span
                     className="text-[10px] font-semibold tracking-widest uppercase"
-                    style={{ color: "#00ff88" }}
+                    style={{ color: "#2478e5" }}
                   >
                     Locked
                   </span>
@@ -170,9 +170,9 @@ export default function FindingCard({ finding, index, number }: Props) {
                   rel="noopener noreferrer"
                   className="text-[10px] font-bold px-3 py-1.5 rounded-lg flex-shrink-0 transition-all hover:opacity-90"
                   style={{
-                    background: "rgba(0,255,136,0.12)",
-                    border: "1px solid rgba(0,255,136,0.3)",
-                    color: "#00ff88",
+                    background: "#eaf2ff",
+                    border: "1px solid #9fc5ff",
+                    color: "#1b63c3",
                     whiteSpace: "nowrap",
                   }}
                 >

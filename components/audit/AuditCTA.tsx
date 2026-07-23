@@ -11,9 +11,9 @@ export default function AuditCTA() {
     <section
       className="rounded-2xl p-8 lg:p-12 text-center relative overflow-hidden"
       style={{
-        background:
-          "linear-gradient(135deg, rgba(0,40,20,0.8) 0%, rgba(0,12,5,0.95) 100%)",
-        border: "1px solid rgba(0,255,136,0.25)",
+        background: "linear-gradient(135deg, #f7faff 0%, #eaf2ff 100%)",
+        border: "1px solid #b8d5fb",
+        boxShadow: "0 18px 50px rgba(7,17,40,0.1)",
       }}
     >
       {/* Glow */}
@@ -21,7 +21,7 @@ export default function AuditCTA() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 0%, rgba(0,255,136,0.12) 0%, transparent 65%)",
+            "radial-gradient(ellipse at 50% 0%, rgba(36,120,229,0.13) 0%, transparent 65%)",
         }}
       />
 
@@ -31,9 +31,9 @@ export default function AuditCTA() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[rgba(0,255,136,0.3)] bg-[rgba(0,255,136,0.06)] mb-5">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#00ff88] animate-pulse" />
-            <span className="text-[#00ff88] text-xs font-medium">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#9fc5ff] bg-white mb-5">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#2478e5] animate-pulse" />
+            <span className="text-[#1b63c3] text-xs font-medium">
               Your profile has ranking potential
             </span>
           </div>
@@ -51,9 +51,10 @@ export default function AuditCTA() {
               href={`https://wa.me/${WA_NUM}?text=Hi%20Get%20Real%20Flow%2C%20I%20want%20to%20unlock%20my%20full%20100-point%20GMB%20audit%20and%20discuss%20ranking%20my%20business.`}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(0,255,136,0.35)" }}
+              whileHover={{ scale: 1.03, boxShadow: "0 14px 32px rgba(37,211,102,0.28)" }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-[#060d1f] bg-[#00ff88] hover:bg-[#00cc6a] transition-all"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold transition-all"
+              style={{ background: "#25d366", color: "#ffffff" }}
             >
               <MessageCircle className="w-4 h-4" />
               WhatsApp Get Real Flow
@@ -65,8 +66,8 @@ export default function AuditCTA() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#00ff88] transition-all"
-              style={{ border: "1px solid rgba(0,255,136,0.3)", background: "rgba(0,255,136,0.05)" }}
+              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#1b63c3] transition-all"
+              style={{ border: "1px solid #9fc5ff", background: "#ffffff" }}
             >
               <Phone className="w-4 h-4" />
               Book Strategy Call
@@ -74,8 +75,8 @@ export default function AuditCTA() {
 
             <Link
               href="/#pricing"
-              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#8899bb] hover:text-white transition-colors"
-              style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)" }}
+              className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[#3c4043] hover:text-[#071128] transition-colors"
+              style={{ border: "1px solid #dadce0", background: "#ffffff" }}
             >
               View Pricing
               <ArrowRight className="w-4 h-4" />

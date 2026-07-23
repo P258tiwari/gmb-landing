@@ -102,7 +102,7 @@ export default function Pricing() {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
-              className="relative rounded-2xl overflow-hidden flex flex-col hover:-translate-y-1.5 transition-transform duration-200"
+              className="relative rounded-2xl overflow-visible flex flex-col hover:-translate-y-1.5 transition-transform duration-200"
               style={
                 plan.popular
                   ? {
@@ -183,22 +183,22 @@ export default function Pricing() {
                     border: "1px solid rgba(36,120,229,0.2)",
                   }}
                 >
-                  <Zap className="w-3.5 h-3.5 text-[#00ff88] flex-shrink-0" />
-                  <span className="text-[11px] text-[#00ff88] font-medium flex-1">
+                  <Zap className="w-3.5 h-3.5 text-[#2478e5] flex-shrink-0" />
+                  <span className="text-[11px] text-[#1b63c3] font-semibold flex-1">
                     Top 3 for {plan.guaranteeKeywords} keywords in 6 months
                   </span>
                   {/* Info icon with tooltip */}
-                  <div className="relative group flex-shrink-0">
-                    <Info className="w-3.5 h-3.5 text-[#00ff88]/60 cursor-pointer hover:text-[#00ff88] transition-colors" />
+                  <div className="relative group flex-shrink-0" tabIndex={0}>
+                    <Info className="w-4 h-4 text-[#2478e5] cursor-help transition-colors" aria-label="View money-back guarantee details" />
                     <div
-                      className="absolute bottom-full right-0 mb-2 w-56 px-3 py-2 rounded-lg text-[11px] leading-relaxed text-[#8899bb] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50"
+                      className="absolute bottom-full right-0 mb-2 w-64 px-4 py-3 rounded-xl text-[11px] leading-relaxed text-[#3c4043] pointer-events-none opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-[200]"
                       style={{
-                        background: "#0a1628",
-                        border: "1px solid rgba(0,255,136,0.25)",
-                        boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
+                        background: "#ffffff",
+                        border: "1px solid #b8d5fb",
+                        boxShadow: "0 16px 40px rgba(7,17,40,0.18)",
                       }}
                     >
-                      <span className="text-[#00ff88] font-semibold block mb-1">Money-back guarantee</span>
+                      <span className="text-[#1b63c3] font-bold block mb-1">Money-back guarantee</span>
                       If your business doesn&apos;t reach Top 3 for the committed keywords within 6 months, we work for free until it does — or refund you fully.
                       {/* Arrow */}
                       <div
@@ -206,7 +206,7 @@ export default function Pricing() {
                         style={{
                           borderLeft: "5px solid transparent",
                           borderRight: "5px solid transparent",
-                          borderTop: "5px solid rgba(0,255,136,0.25)",
+                          borderTop: "5px solid #ffffff",
                         }}
                       />
                     </div>

@@ -103,17 +103,17 @@ export default function CaseStudies() {
               </div>
 
               {/* Metrics */}
-              <div className="p-5 flex flex-col gap-3 flex-1">
+              <div className="flex flex-1 flex-col px-5 pb-5 pt-4">
                 {/* Calls + Directions */}
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="glass-card rounded-lg p-3">
+                <div className="grid grid-cols-2 border-b border-[#e1e8f0] pb-4">
+                  <div className="border-r border-[#e1e8f0] pr-4">
                     <div className="flex items-center gap-1 mb-2">
                       <Phone className="w-3 h-3 text-[#00ff88]" />
                       <span className="text-[10px] text-[#8899bb]">Calls</span>
                     </div>
                     <div className="text-[#00ff88] font-black text-xl">{c.callsGrowth}</div>
                   </div>
-                  <div className="glass-card rounded-lg p-3">
+                  <div className="pl-4">
                     <div className="flex items-center gap-1 mb-2">
                       <Navigation2 className="w-3 h-3 text-[#4d9fff]" />
                       <span className="text-[10px] text-[#8899bb]">Directions</span>
@@ -123,14 +123,14 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Keywords in Top 3 — full-width, styled like reviews row */}
-                <div className="glass-card rounded-lg p-3 flex items-center gap-2">
+                <div className="flex items-center gap-2 border-b border-[#e1e8f0] py-4">
                   <MapPin className="w-3 h-3 text-[#00ff88] flex-shrink-0" />
                   <span className="text-xs text-[#8899bb]">Keywords in Top 3</span>
                   <span className="text-[#00ff88] font-black text-sm ml-auto">{c.keywordsTop3}</span>
                 </div>
 
                 {/* Reviews */}
-                <div className="glass-card rounded-lg p-3 flex items-center gap-2">
+                <div className="flex items-center gap-2 pt-4">
                   <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                   <span className="text-xs text-[#8899bb]">Reviews</span>
                   <span className="text-white text-xs font-semibold ml-auto">{c.reviews}</span>

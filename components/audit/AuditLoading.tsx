@@ -32,7 +32,7 @@ export default function AuditLoading() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 40%, rgba(0,255,136,0.08) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 50% 40%, rgba(36,120,229,0.12) 0%, transparent 60%)",
         }}
       />
 
@@ -45,15 +45,15 @@ export default function AuditLoading() {
             className="absolute inset-0 rounded-full"
             style={{
               border: "2px solid transparent",
-              borderTopColor: "#00ff88",
-              borderRightColor: "rgba(0,255,136,0.3)",
+              borderTopColor: "#2478e5",
+              borderRightColor: "rgba(36,120,229,0.3)",
             }}
           />
           <div
             className="absolute inset-2 rounded-full flex items-center justify-center"
             style={{
-              background: "rgba(0,255,136,0.06)",
-              border: "1px solid rgba(0,255,136,0.15)",
+              background: "rgba(36,120,229,0.08)",
+              border: "1px solid rgba(36,120,229,0.2)",
             }}
           >
             <AnimatePresence mode="wait">
@@ -64,7 +64,7 @@ export default function AuditLoading() {
                 exit={{ scale: 0.5, opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <Icon className="w-8 h-8 text-[#00ff88]" />
+                <Icon className="w-8 h-8 text-[#2478e5]" />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -96,7 +96,7 @@ export default function AuditLoading() {
               style={{
                 width: i === step ? 20 : 6,
                 height: 6,
-                background: i <= step ? "#00ff88" : "rgba(255,255,255,0.1)",
+                background: i <= step ? "#2478e5" : "#dbe3ef",
               }}
             />
           ))}

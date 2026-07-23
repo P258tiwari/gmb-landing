@@ -279,6 +279,11 @@ main > section:nth-of-type(even) {
   box-shadow: 0 8px 24px rgba(7, 17, 40, 0.08);
 }
 
+#before-after [style*="#e6f4ea"] {
+  background: #eaf2ff !important;
+  border-color: #c6dcfb !important;
+}
+
 /* Ensure white cards and panels always inherit readable dark copy. */
 .glass-card,
 .maps-card,

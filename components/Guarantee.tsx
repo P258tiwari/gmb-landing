@@ -9,25 +9,20 @@ const tiers = [
     plan: "Starter",
     keywords: 2,
     icon: MapPin,
-    color: "#4d9fff",
-    bg: "rgba(77,159,255,0.08)",
-    border: "rgba(77,159,255,0.25)",
+    label: "Local foundation",
   },
   {
     plan: "Growth",
     keywords: 5,
     icon: TrendingUp,
-    color: "#2478e5",
-    bg: "rgba(36,120,229,0.08)",
-    border: "rgba(36,120,229,0.3)",
+    label: "Most popular",
+    featured: true,
   },
   {
     plan: "Max",
     keywords: 8,
     icon: BadgeCheck,
-    color: "#071128",
-    bg: "rgba(36,120,229,0.12)",
-    border: "rgba(36,120,229,0.45)",
+    label: "Market coverage",
   },
 ];
 
@@ -92,7 +87,7 @@ export default function Guarantee() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 text-2xl sm:text-3xl font-bold text-white/60"
+          className="mt-4 text-2xl sm:text-3xl font-bold text-[#202124]"
         >
           Top 3 in 6 months — or we refund you fully.
         </motion.p>
@@ -111,38 +106,66 @@ export default function Guarantee() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="mt-12 grid sm:grid-cols-3 gap-4"
+          className="relative mt-14 grid items-stretch gap-5 sm:grid-cols-3"
         >
+          <div className="pointer-events-none absolute left-[16%] right-[16%] top-9 hidden h-px bg-gradient-to-r from-[#b8d5fb] via-[#2478e5] to-[#b8d5fb] sm:block" />
           {tiers.map((tier, i) => {
             const Icon = tier.icon;
+            const featured = "featured" in tier && tier.featured;
             return (
               <motion.div
                 key={tier.plan}
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.45 + i * 0.1 }}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="rounded-2xl p-6 text-center"
+                whileHover={{ y: -7, transition: { duration: 0.2 } }}
+                className="relative flex min-h-[290px] flex-col overflow-hidden rounded-[24px] p-6 text-left"
                 style={{
-                  background: tier.bg,
-                  border: `1px solid ${tier.border}`,
+                  background: featured
+                    ? "linear-gradient(145deg, #2478e5 0%, #1557b5 100%)"
+                    : "linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%)",
+                  border: featured ? "1px solid #2478e5" : "1px solid #c6dcfb",
+                  boxShadow: featured
+                    ? "0 24px 55px rgba(36,120,229,0.28)"
+                    : "0 12px 34px rgba(7,17,40,0.09)",
+                  transform: featured ? "translateY(-10px)" : undefined,
                 }}
               >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
-                  style={{ background: `${tier.color}18`, border: `1px solid ${tier.color}30` }}
-                >
-                  <Icon className="w-6 h-6" style={{ color: tier.color }} />
+                <div className="mb-8 flex items-center justify-between">
+                  <div
+                    className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl"
+                    style={{
+                      background: featured ? "rgba(255,255,255,.16)" : "#eaf2ff",
+                      border: featured ? "1px solid rgba(255,255,255,.3)" : "1px solid #b8d5fb",
+                      color: featured ? "#ffffff" : "#2478e5",
+                    }}
+                  >
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <span
+                    className="rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[.12em]"
+                    style={{
+                      background: featured ? "rgba(255,255,255,.16)" : "#eaf2ff",
+                      color: featured ? "#ffffff" : "#1b63c3",
+                    }}
+                  >
+                    {tier.label}
+                  </span>
                 </div>
-                <div className="text-white font-bold text-base mb-2">{tier.plan}</div>
-                <div
-                  className="text-4xl font-black mb-1"
-                  style={{ color: tier.color }}
-                >
-                  Top 3
+                <div className="text-sm font-bold uppercase tracking-[.14em]" style={{ color: featured ? "#dbeafe" : "#5f6368" }}>
+                  {tier.plan}
                 </div>
-                <div className="text-[#8899bb] text-sm">
-                  for <span className="text-white font-semibold">{tier.keywords} keywords</span> in 6 months
+                <div className="mt-2 flex items-end gap-2">
+                  <span className="text-6xl font-black leading-none" style={{ color: featured ? "#ffffff" : "#071128" }}>
+                    {tier.keywords}
+                  </span>
+                  <span className="pb-1 text-sm font-semibold" style={{ color: featured ? "#dbeafe" : "#1b63c3" }}>
+                    keywords
+                  </span>
+                </div>
+                <div className="mt-auto flex items-center justify-between border-t pt-4" style={{ borderColor: featured ? "rgba(255,255,255,.22)" : "#dbeafe" }}>
+                  <span className="text-sm font-bold" style={{ color: featured ? "#ffffff" : "#2478e5" }}>Top 3 target</span>
+                  <span className="text-xs" style={{ color: featured ? "#dbeafe" : "#5f6368" }}>within 6 months</span>
                 </div>
               </motion.div>
             );
@@ -170,7 +193,7 @@ export default function Guarantee() {
         >
           <motion.button
             onClick={() => document.querySelector("#final-cta")?.scrollIntoView({ behavior: "smooth" })}
-            whileHover={{ scale: 1.03, boxShadow: "0 0 35px rgba(0,255,136,0.35)" }}
+            whileHover={{ scale: 1.03, boxShadow: "0 14px 34px rgba(36,120,229,0.3)" }}
             whileTap={{ scale: 0.97 }}
             className="px-8 py-4 rounded-xl font-bold text-base"
             style={{ background: "#2478e5", color: "#ffffff", boxShadow: "0 12px 30px rgba(36,120,229,0.28)" }}

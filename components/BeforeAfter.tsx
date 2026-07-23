@@ -27,8 +27,8 @@ function PlacePanel({ optimized = false, inView }: PlacePanelProps) {
         <div className="overflow-hidden rounded-xl border border-[#dadce0]">
           <div className="relative h-28 overflow-hidden bg-[#e8f0e8]" style={{ backgroundImage: "linear-gradient(32deg, transparent 46%, #fff 47%, #fff 52%, transparent 53%), linear-gradient(145deg, transparent 43%, #fff 44%, #fff 49%, transparent 50%), linear-gradient(90deg, rgba(174,203,223,.42) 1px, transparent 1px), linear-gradient(rgba(174,203,223,.42) 1px, transparent 1px)", backgroundSize: "150px 110px, 170px 130px, 38px 38px, 38px 38px" }}>
             <div className="absolute right-[-8%] top-1 h-8 w-36 -rotate-12 bg-[#a8dff0]" /><div className="absolute left-[35%] top-[43%] text-[12px] font-bold text-[#5f6368]">KANPUR</div>
-            {[[18,25],[72,20],[24,70],[78,68]].map(([left, top], index) => <MapPin key={index} className="absolute h-4 w-4 fill-[#ea4335] text-white" style={{ left: `${left}%`, top: `${top}%` }} />)}
-            <motion.div initial={{ left: optimized ? "82%" : "86%", top: optimized ? "80%" : "82%" }} animate={inView && optimized ? { left: "53%", top: "31%" } : {}} transition={{ delay: .8, duration: 1.2 }} className="absolute"><MapPin className={`h-7 w-7 text-white drop-shadow ${optimized ? "fill-[#4285f4]" : "fill-[#9aa0a6]"}`} /></motion.div>
+            {[[18,25],[72,20],[24,70],[78,68]].map(([left, top], index) => <MapPin key={index} className="absolute h-4 w-4 fill-[#ea4335]" style={{ left: `${left}%`, top: `${top}%`, color: "#ffffff", strokeWidth: 2.5 }} />)}
+            <motion.div initial={{ left: optimized ? "82%" : "86%", top: optimized ? "80%" : "82%" }} animate={inView && optimized ? { left: "53%", top: "31%" } : {}} transition={{ delay: .8, duration: 1.2 }} className="absolute"><MapPin className={`h-7 w-7 drop-shadow ${optimized ? "fill-[#2478e5]" : "fill-[#9aa0a6]"}`} style={{ color: "#ffffff", strokeWidth: 2.5 }} /></motion.div>
             <span className="absolute bottom-1 left-2 rounded bg-white/80 px-1 text-[7px] text-[#70757a]">Map data ©2026</span>
           </div>
 

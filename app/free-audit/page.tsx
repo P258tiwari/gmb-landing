@@ -73,7 +73,9 @@ export default function FreeAuditPage() {
             <span
               className="bg-clip-text text-transparent"
               style={{
-                backgroundImage: "linear-gradient(135deg, #00ff88 0%, #4d9fff 100%)",
+                backgroundImage: "linear-gradient(135deg, #071128 0%, #2478e5 58%, #60a5fa 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
               }}
             >
               is not ranking on Google.

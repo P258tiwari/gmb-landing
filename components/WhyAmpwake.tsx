@@ -57,8 +57,7 @@ export default function WhyAmpwake() {
         <div className="grid md:grid-cols-2 gap-5">
           {whyCards.map((card, i) => {
             const Icon = iconMap[card.icon];
-            const isNeon = card.accent === "neon";
-            const accentColor = isNeon ? "#00ff88" : "#4d9fff";
+            const accentColor = "#2478e5";
             return (
               <motion.div
                 key={card.id}
@@ -68,10 +67,8 @@ export default function WhyAmpwake() {
                 whileHover={{ y: -6, transition: { duration: 0.22 } }}
                 className="relative group rounded-2xl p-7 overflow-hidden cursor-default"
                 style={{
-                  background: isNeon
-                    ? "linear-gradient(145deg, rgba(0,30,15,0.7) 0%, rgba(6,13,31,0.9) 100%)"
-                    : "linear-gradient(145deg, rgba(10,20,50,0.7) 0%, rgba(6,13,31,0.9) 100%)",
-                  border: `1px solid rgba(${isNeon ? "0,255,136" : "77,159,255"},0.15)`,
+                  background: "linear-gradient(145deg, #ffffff 0%, #f7faff 100%)",
+                  border: "1px solid rgba(36,120,229,0.2)",
                 }}
               >
                 {/* Top corner glow on hover */}
@@ -83,7 +80,7 @@ export default function WhyAmpwake() {
                 <div className="flex items-start gap-5">
                   <div
                     className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ background: `rgba(${isNeon ? "0,255,136" : "77,159,255"},0.1)`, border: `1px solid rgba(${isNeon ? "0,255,136" : "77,159,255"},0.2)` }}
+                    style={{ background: "rgba(36,120,229,0.09)", border: "1px solid rgba(36,120,229,0.22)" }}
                   >
                     {Icon && <Icon className="w-5 h-5" style={{ color: accentColor }} />}
                   </div>

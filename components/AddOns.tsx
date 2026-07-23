@@ -84,15 +84,15 @@ function CalcModal({
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         className="relative w-full max-w-lg rounded-2xl overflow-hidden"
         style={{
-          background: "#08111f",
-          border: "1px solid rgba(77,159,255,0.2)",
-          boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(77,159,255,0.08)",
+          background: "linear-gradient(180deg, #f7faff 0%, #ffffff 100%)",
+          border: "1px solid #9fc5ff",
+          boxShadow: "0 36px 90px rgba(7,17,40,0.32), 0 0 0 6px rgba(36,120,229,0.08)",
         }}
       >
         {/* Header */}
         <div
           className="flex items-center justify-between px-6 py-5 border-b"
-          style={{ borderColor: "rgba(255,255,255,0.06)" }}
+          style={{ borderColor: "#dbeafe", background: "#eef5ff" }}
         >
           <div className="flex items-center gap-3">
             <div
@@ -102,13 +102,13 @@ function CalcModal({
               <Calculator className="w-4 h-4 text-[#4d9fff]" />
             </div>
             <div>
-              <div className="text-white font-bold text-sm">Add-On Price Calculator</div>
-              <div className="text-[#8899bb] text-xs">Google Ads Management</div>
+              <div className="text-[#071128] font-bold text-sm">Add-On Price Calculator</div>
+              <div className="text-[#5f6368] text-xs">Google Ads Management</div>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-[#8899bb] hover:text-white hover:bg-white/5 transition-all"
+            className="w-8 h-8 rounded-lg flex items-center justify-center text-[#5f6368] hover:text-[#071128] hover:bg-[#dbeafe] transition-all"
           >
             <X className="w-4 h-4" />
           </button>
@@ -117,7 +117,7 @@ function CalcModal({
         <div className="p-6 space-y-5">
           {/* Platform selector */}
           <div>
-            <label className="text-[#8899bb] text-xs font-semibold uppercase tracking-widest mb-2 block">
+            <label className="text-[#3c4043] text-xs font-semibold uppercase tracking-widest mb-2 block">
               Ad Account Platform
             </label>
             <div className="grid grid-cols-2 gap-2">
@@ -129,19 +129,19 @@ function CalcModal({
                   style={{
                     background: platform === p.id
                       ? "rgba(36,120,229,0.1)"
-                      : "rgba(255,255,255,0.03)",
+                      : "#ffffff",
                     border: `1px solid ${platform === p.id
                       ? "rgba(36,120,229,0.4)"
-                      : "rgba(255,255,255,0.07)"}`,
+                      : "#dadce0"}`,
                   }}
                 >
                   <div
                     className="text-sm font-semibold mb-0.5"
-                    style={{ color: platform === p.id ? p.badgeColor : "#fff" }}
+                    style={{ color: platform === p.id ? p.badgeColor : "#202124" }}
                   >
                     {p.label}
                   </div>
-                  <div className="text-[10px] text-[#8899bb] whitespace-nowrap overflow-hidden text-ellipsis">{p.description}</div>
+                  <div className="text-[10px] text-[#5f6368] whitespace-nowrap overflow-hidden text-ellipsis">{p.description}</div>
                 </button>
               ))}
             </div>
@@ -149,12 +149,12 @@ function CalcModal({
 
           {/* Budget input */}
           <div>
-            <label className="text-[#8899bb] text-xs font-semibold uppercase tracking-widest mb-2 block">
+            <label className="text-[#3c4043] text-xs font-semibold uppercase tracking-widest mb-2 block">
               Monthly Ad Budget (₹)
             </label>
             <div
               className="flex items-center gap-3 rounded-xl px-4 py-3"
-              style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}
+              style={{ background: "#ffffff", border: "1px solid #cbdaf0", boxShadow: "inset 0 1px 2px rgba(7,17,40,0.04)" }}
             >
               <span className="text-[#8899bb] text-lg font-bold">₹</span>
               <input
@@ -163,11 +163,11 @@ function CalcModal({
                 placeholder="e.g. 20000"
                 value={budget}
                 onChange={(e) => setBudget(e.target.value)}
-                className="flex-1 bg-transparent text-white font-semibold text-base outline-none placeholder-[#445566]"
+                className="flex-1 bg-transparent text-[#071128] font-semibold text-base outline-none placeholder-[#80868b]"
               />
-              <span className="text-[#8899bb] text-xs">/month</span>
+              <span className="text-[#5f6368] text-xs">/month</span>
             </div>
-            <p className="text-[#445566] text-xs mt-1.5">Enter how much you plan to spend on ads each month</p>
+            <p className="text-[#70757a] text-xs mt-1.5">Enter how much you plan to spend on ads each month</p>
           </div>
 
           {/* Breakdown */}
@@ -180,9 +180,9 @@ function CalcModal({
                 exit={{ opacity: 0, y: -6 }}
                 transition={{ duration: 0.3 }}
                 className="rounded-xl overflow-hidden"
-                style={{ border: "1px solid rgba(0,255,136,0.2)", background: "rgba(0,255,136,0.04)" }}
+                style={{ border: "1px solid #9fc5ff", background: "#eef5ff" }}
               >
-                <div className="px-4 py-3 border-b" style={{ borderColor: "rgba(0,255,136,0.1)" }}>
+                <div className="px-4 py-3 border-b" style={{ borderColor: "#c6dcfb" }}>
                   <div className="text-[#00ff88] text-[10px] font-bold uppercase tracking-widest">Your Estimated Cost</div>
                 </div>
                 <div className="p-4 space-y-2.5">
@@ -200,7 +200,7 @@ function CalcModal({
                   </div>
                   <div
                     className="flex justify-between items-center pt-2.5 mt-1 border-t"
-                    style={{ borderColor: "rgba(0,255,136,0.15)" }}
+                    style={{ borderColor: "#c6dcfb" }}
                   >
                     <span className="text-white font-bold text-sm">Get Real Flow fee monthly</span>
                     <span className="text-[#00ff88] font-black text-lg">{formatINR(totalMonthly)}/mo</span>
@@ -216,7 +216,7 @@ function CalcModal({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="rounded-xl p-4 text-center"
-                style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)" }}
+                style={{ background: "#eef5ff", border: "1px solid #c6dcfb" }}
               >
                 <ChevronDown className="w-5 h-5 text-[#445566] mx-auto mb-1" />
                 <p className="text-[#445566] text-xs">Enter your budget above to see your cost breakdown</p>
@@ -228,10 +228,10 @@ function CalcModal({
           <motion.a
             href="#final-cta"
             onClick={onClose}
-            whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(0,255,136,0.3)" }}
+            whileHover={{ scale: 1.02, boxShadow: "0 14px 32px rgba(36,120,229,0.28)" }}
             whileTap={{ scale: 0.97 }}
             className="flex items-center justify-center gap-2.5 w-full py-4 rounded-xl font-bold text-sm cursor-pointer"
-            style={{ background: "#00ff88", color: "#060d1f" }}
+            style={{ background: "#2478e5", color: "#ffffff" }}
           >
             <MessageCircle className="w-4 h-4" />
             Connect with an Expert
@@ -271,7 +271,7 @@ export default function AddOns() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white"
+            className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#071128]"
           >
             Accelerate with{" "}
             <span className="text-gradient-neon">Google Ads.</span>
@@ -308,7 +308,7 @@ We run Google Maps ads to put your business at the very top of Maps results — 
                 <TrendingUp className="w-5 h-5 text-[#4d9fff]" />
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg">Google Ads Management</h3>
+                <h3 className="text-[#071128] font-bold text-lg">Google Ads Management</h3>
                 <p className="text-[#8899bb] text-xs">Google Maps ads · ₹1,000/mo + 20% of your ad budget</p>
               </div>
             </div>
