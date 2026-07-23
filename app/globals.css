@@ -306,6 +306,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   outline-offset: 2px;
 }
 
+.calculator-budget-input,
+.calculator-budget-input:focus,
+.calculator-budget-input:focus-visible {
+  background: transparent !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

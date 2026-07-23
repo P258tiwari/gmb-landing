@@ -163,7 +163,7 @@ function CalcModal({
                 placeholder="e.g. 20000"
                 value={budget}
                 onChange={(e) => setBudget(e.target.value)}
-                className="flex-1 bg-transparent text-[#071128] font-semibold text-base outline-none placeholder-[#80868b]"
+                className="calculator-budget-input flex-1 bg-transparent text-[#071128] font-semibold text-base outline-none placeholder-[#80868b]"
               />
               <span className="text-[#5f6368] text-xs">/month</span>
             </div>

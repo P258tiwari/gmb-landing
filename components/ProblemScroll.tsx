@@ -57,7 +57,7 @@ export default function ProblemScroll() {
         const exitAt = (i + 1) * step;
         tl.fromTo(
           el,
-          { opacity: 0, y: 24, filter: "blur(4px)" },
+          { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 24, filter: i === 0 ? "blur(0px)" : "blur(4px)" },
           { opacity: 1, y: 0, filter: "blur(0px)", duration: step * 0.55, ease: "power2.out" },
           enterAt,
         );
@@ -128,7 +128,7 @@ export default function ProblemScroll() {
                 key={i}
                 ref={(el) => { wordsRef.current[i] = el; }}
                 className="absolute inset-0 flex flex-col items-center justify-center"
-                style={{ opacity: 0 }}
+                style={{ opacity: i === 0 ? 1 : 0 }}
               >
                 <h2
                   className="font-black tracking-tight leading-none whitespace-nowrap"
