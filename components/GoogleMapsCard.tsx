@@ -62,8 +62,6 @@ export default function GoogleMapsCard() {
         </div>
 
         <div className="relative overflow-hidden bg-[#e8f0e8]" style={{ backgroundImage: "linear-gradient(30deg, transparent 47%, #fff 48%, #fff 52%, transparent 53%), linear-gradient(150deg, transparent 44%, #fff 45%, #fff 49%, transparent 50%), linear-gradient(90deg, rgba(174,203,223,.45) 1px, transparent 1px), linear-gradient(rgba(174,203,223,.45) 1px, transparent 1px)", backgroundSize: "145px 120px, 180px 150px, 42px 42px, 42px 42px" }}>
-          <div className="absolute left-[5%] top-[10%] h-16 w-40 -rotate-6 rounded-[48%] border border-[#bdddc8]/60 bg-[#d7ecdc]/80" />
-          <div className="absolute right-[-16%] top-[28%] h-20 w-64 -rotate-[12deg] rounded-[50%] border border-[#a8d3e7]/50 bg-[#c7e6f3]/80 blur-[0.5px]" />
           <div className="absolute left-[20%] top-[56%] -rotate-45 text-[10px] text-[#5f6368]">Mall Road</div><div className="absolute bottom-[24%] right-[10%] rotate-45 text-[10px] text-[#5f6368]">Canal Road</div><div className="absolute left-[28%] top-[45%] text-[15px] font-bold text-[#3c4043]">KANPUR</div>
           {[[24,28],[68,20],[38,64],[76,58],[57,78],[18,82]].map(([left, top], index) => <MapPin key={index} className="absolute h-5 w-5 fill-[#ea4335] drop-shadow" style={{ left: `${left}%`, top: `${top}%`, color: "#ffffff" }} />)}
           <motion.div className="absolute" animate={{ left: isTop ? "55%" : "82%", top: isTop ? "34%" : "82%" }} transition={{ duration: 1.5, ease: "easeInOut" }}><div className="relative"><MapPin className="h-8 w-8 fill-[#2478e5] drop-shadow-lg" style={{ color: "#ffffff" }} />{isTop && <span className="absolute inset-0 rounded-full bg-[#4285f4]/30 animate-ping" />}</div></motion.div>
